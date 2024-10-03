@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Rubik+Mono+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	@apply m-0 p-0;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	@apply h-full;
+	font-family: 'Luckiest Guy', sans-serif;
+}
+
+#root {
+	@apply h-full;
+}
+
+button {
+	@apply bg-transparent transition-all block  border-none outline-none cursor-pointer active:scale-95;
+}
