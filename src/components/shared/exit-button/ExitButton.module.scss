@@ -1,0 +1,7 @@
+.wrapper {
+	@apply bg-[#FF5C5C] w-[50px] h-[50px] flex items-center justify-center  rounded-xl;
+	box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+	> img {
+		@apply w-[32px] h-[32px] mt-[8px];
+	}
+}

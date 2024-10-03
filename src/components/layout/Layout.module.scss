@@ -1,0 +1,6 @@
+.layout {
+	@apply flex flex-col h-full;
+	> div {
+		@apply px-2 flex-1;
+	}
+}

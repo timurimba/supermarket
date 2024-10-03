@@ -18,58 +18,86 @@ import { IRoute } from './router.types'
 export const routes: IRoute[] = [
 	{
 		path: '/',
-		component: Home
+		component: Home,
+		headerBg: 'transparent',
+		mainBg: 'transparent'
 	},
 	{
 		path: '/rating',
-		component: Rating
+		component: Rating,
+		headerBg: '#6FB2D0',
+		mainBg: '#518CA7'
 	},
 	{
 		path: '/cashiers',
-		component: Cashiers
+		component: Cashiers,
+		headerBg: '#F0C191',
+		mainBg: '#BB9167'
 	},
 	{
 		path: '/bakery',
-		component: Bakery
+		component: Bakery,
+		headerBg: '#F0A491',
+		mainBg: '#BF7555'
 	},
 	{
 		path: '/clothes',
-		component: Clothes
+		component: Clothes,
+		headerBg: '#6FB2D0',
+		mainBg: '#518CA7'
 	},
 	{
 		path: '/fish-department',
-		component: FishDepartment
+		component: FishDepartment,
+		headerBg: '#6FB2D0',
+		mainBg: '#518CA7'
 	},
 	{
 		path: '/indicators',
-		component: Indicators
+		component: Indicators,
+		headerBg: '#6FB2D0',
+		mainBg: '#518CA7'
 	},
 	{
 		path: '/meat-department',
-		component: MeatDepartment
+		component: MeatDepartment,
+		headerBg: '#F0A491',
+		mainBg: '#BF7555'
 	},
 	{
 		path: '/perfumery',
-		component: Perfumery
+		component: Perfumery,
+		headerBg: '#F091E7',
+		mainBg: '#BA55BF'
 	},
 	{
 		path: '/settings',
-		component: Settings
+		component: Settings,
+		headerBg: '#C2C2C2',
+		mainBg: '#939393'
 	},
 	{
 		path: '/shop',
-		component: Shop
+		component: Shop,
+		headerBg: '#8B7DF3',
+		mainBg: '#5E5790'
 	},
 	{
 		path: '/special-offer',
-		component: SpecialOffer
+		component: SpecialOffer,
+		headerBg: '#FFC96A',
+		mainBg: '#FFC96A'
 	},
 	{
 		path: '/tasks',
-		component: Tasks
+		component: Tasks,
+		headerBg: '#8B7DF3',
+		mainBg: '#5E5790'
 	},
 	{
 		path: '/vegetable-department',
-		component: VegetableDepartment
+		component: VegetableDepartment,
+		headerBg: '#8B7DF3',
+		mainBg: '#5E5790'
 	}
 ]
