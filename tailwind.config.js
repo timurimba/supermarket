@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
+			fontFamily: {
+				'rubik-mono': ['Rubik Mono One'],
+				'rubik-one': ['Rubik One']
+			},
 			spacing: {
 				LAYOUT_OFFSET_MORE: '130px',
 				LAYOUT_OFFSET_LESS: '86px'

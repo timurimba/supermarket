@@ -1,5 +1,6 @@
 import Bakery from '@/components/screens/bakery/Bakery'
 import Clothes from '@/components/screens/clothes/Clothes'
+import Control from '@/components/screens/control/Control'
 import FishDepartment from '@/components/screens/fish-department/FishDepartment'
 import Home from '@/components/screens/home/Home'
 import Indicators from '@/components/screens/indicators/Indicators'
@@ -99,5 +100,11 @@ export const routes: IRoute[] = [
 		component: VegetableDepartment,
 		headerBg: '#8B7DF3',
 		mainBg: '#5E5790'
+	},
+	{
+		path: '/control',
+		component: Control,
+		headerBg: '#6FB2D0',
+		mainBg: '#518CA7'
 	}
 ]
