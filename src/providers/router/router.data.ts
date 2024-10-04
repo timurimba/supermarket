@@ -2,7 +2,6 @@ import Bakery from '@/components/screens/bakery/Bakery'
 import Clothes from '@/components/screens/clothes/Clothes'
 import Control from '@/components/screens/control/Control'
 import FishDepartment from '@/components/screens/fish-department/FishDepartment'
-import Home from '@/components/screens/home/Home'
 import Indicators from '@/components/screens/indicators/Indicators'
 import MeatDepartment from '@/components/screens/meat-department/MeatDepartment'
 import Perfumery from '@/components/screens/perfumery/Perfumery'
@@ -19,9 +18,11 @@ import { IRoute } from './router.types'
 export const routes: IRoute[] = [
 	{
 		path: '/',
-		component: Home,
-		headerBg: 'transparent',
-		mainBg: 'transparent'
+		component: Perfumery,
+		// headerBg: 'transparent',
+		// mainBg: 'transparent',
+		headerBg: '#F091E7',
+		mainBg: '#BA55BF'
 	},
 	{
 		path: '/rating',

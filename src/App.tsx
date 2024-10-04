@@ -1,3 +1,4 @@
+import { WebAppProvider } from '@vkruglikov/react-telegram-web-app'
 import type { FC } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
@@ -6,11 +7,13 @@ import RouterProvider from './providers/router/RouterProvider'
 
 const App: FC = () => {
 	return (
-		<Router>
-			<Layout>
-				<RouterProvider />
-			</Layout>
-		</Router>
+		<WebAppProvider>
+			<Router>
+				<Layout>
+					<RouterProvider />
+				</Layout>
+			</Router>
+		</WebAppProvider>
 	)
 }
 
