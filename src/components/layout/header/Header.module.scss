@@ -18,7 +18,6 @@
 			> div {
 				@apply bg-white w-[140px] flex justify-evenly h-[30px] items-center rounded-xl shadow-base;
 				> img {
-					/* @apply drop-shadow-base */
 					filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 				}
 				&:first-child {

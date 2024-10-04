@@ -1,5 +1,5 @@
 .layout {
-	@apply flex flex-col h-full;
+	@apply pb-6 flex flex-col min-h-full;
 	> div {
 		@apply px-2 flex-1;
 	}

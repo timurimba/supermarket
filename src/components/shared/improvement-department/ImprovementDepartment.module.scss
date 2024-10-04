@@ -1,0 +1,39 @@
+.wrapper {
+	@apply bg-white  rounded-xl  px-3 py-2 shadow-base;
+	> div {
+		@apply flex items-center gap-x-2;
+		> div {
+			> strong {
+				@apply font-rubik-one text-[#484848];
+				filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+				@media screen and (max-width: 381px) {
+					@apply text-[14px];
+				}
+			}
+			> p {
+				@apply font-rubik-one text-[#515151] text-lg;
+				filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+				@media screen and (max-width: 381px) {
+					@apply text-[14px];
+				}
+			}
+		}
+	}
+	> button {
+		@apply mt-2 bg-[#87C443] rounded-lg p-1 block w-full;
+		> span {
+			@apply text-white font-rubik-one text-xl;
+			filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+		}
+		> div {
+			@apply gap-x-2 flex items-center justify-center;
+			> span {
+				@apply text-white text-xl;
+				filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+			}
+			> img {
+				@apply shadow-base;
+			}
+		}
+	}
+}
