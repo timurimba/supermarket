@@ -1,0 +1,29 @@
+.control {
+}
+
+.heading {
+	@apply flex mt-2 gap-x-7 justify-end;
+	> div {
+		@apply shadow-base flex items-center bg-[#EBD2B5] rounded-xl px-3;
+		> span {
+			@apply text-[#484848] font-rubik-one text-shadow;
+		}
+	}
+	> a {
+		@apply bg-[#EBD2B5] w-[50px] h-[50px] p-1 rounded-xl;
+	}
+}
+
+.about {
+	@apply bg-white my-4  flex items-center py-2 px-8 rounded-xl shadow-base;
+	> div {
+		@apply text-center text-[#484848]  font-rubik-one;
+		> strong {
+			@apply text-2xl;
+		}
+	}
+}
+
+.departments {
+	@apply flex flex-col gap-y-2;
+}
