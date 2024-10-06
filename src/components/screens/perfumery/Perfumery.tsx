@@ -1,5 +1,4 @@
 import { type FC } from 'react'
-import { useTranslation } from 'react-i18next'
 
 import ImprovementDepartment from '@/components/shared/improvement-department/ImprovementDepartment'
 import StatisticsDepartment from '@/components/shared/statistics-department/StatisticsDepartment'
@@ -7,14 +6,16 @@ import Title from '@/components/shared/title/Title'
 
 import parfumeOne from '@/assets/images/parfume-1.svg'
 
+import { useCustomTranslation } from '@/hooks/useCustomTranslation'
+
 import styles from './Perfumery.module.scss'
 
 const Perfumery: FC = () => {
-	const { t } = useTranslation()
+	const { title } = useCustomTranslation('perfumery')
 	return (
 		<div className={styles.perfumery}>
 			<div className='flex mt-1 justify-center'>
-				<Title>{t('titlePerfumery')}</Title>
+				<Title>{title}</Title>
 			</div>
 			<StatisticsDepartment
 				img={parfumeOne}

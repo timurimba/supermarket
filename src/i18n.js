@@ -6,6 +6,7 @@ import { resourcesLanguages } from './assets/languages/languages.data'
 i18next.use(initReactI18next).init({
 	debug: true,
 	fallbackLng: 'en',
+	returnObjects: true,
 	lng: 'en',
 	resources: resourcesLanguages
 })

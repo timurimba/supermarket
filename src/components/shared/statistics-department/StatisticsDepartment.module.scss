@@ -8,8 +8,7 @@
 				@apply flex-col items-center;
 			}
 			> p {
-				@apply text-[#484848] text-base font-rubik-one;
-				filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+				@apply text-[#484848] text-base font-rubik-one text-shadow;
 				@media screen and (max-width: 402px) {
 					@apply text-center;
 				}
@@ -26,19 +25,19 @@
 				&:first-child {
 					@apply text-[#3D8033];
 					> span {
-						filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+						@apply text-shadow;
 					}
 				}
 				&:first-child + div {
 					@apply text-[#4968A5];
 					> span {
-						filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+						@apply text-shadow;
 					}
 				}
 				&:last-child {
 					@apply text-[#1E5330];
 					> span {
-						filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+						@apply text-shadow;
 					}
 				}
 				> img {
