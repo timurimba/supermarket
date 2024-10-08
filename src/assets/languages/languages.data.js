@@ -4,10 +4,24 @@ export const resourcesLanguages = {
 			perfumery: {
 				title: 'Perfumery'
 			},
-			control: {
-				title: 'Control',
+			management: {
+				title: 'Management',
 				structure: 'Structure',
 				about: 'Here you can open and expand premises in the supermarket'
+			},
+			cashiers: {
+				title: 'Cashiers',
+				soon: 'Soon'
+			},
+			tasks: {
+				title: 'Tasks',
+				subscribe: 'Subscribe to the channel',
+				invite: 'Invite a friend',
+				get: 'Get',
+				reward: 'Reward'
+			},
+			shop: {
+				title: 'Shop'
 			}
 		}
 	},
@@ -16,10 +30,24 @@ export const resourcesLanguages = {
 			perfumery: {
 				title: 'Парфюмерия'
 			},
-			control: {
+			management: {
 				title: 'Управление',
 				structure: 'Строения',
 				about: 'Здесь можно открывать и расширять помещения в супермаркете'
+			},
+			cashiers: {
+				title: 'Кассиры',
+				soon: 'Скоро'
+			},
+			tasks: {
+				title: 'Задания',
+				subscribe: 'Подписаться на канал',
+				invite: 'Пригласить друга',
+				get: 'Получить',
+				reward: 'Награда'
+			},
+			shop: {
+				title: 'Магазин'
 			}
 		}
 	}

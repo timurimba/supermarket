@@ -22,7 +22,7 @@ const Perfumery: FC = () => {
 				title='Туалетная вода'
 				description='Этот парфюм состоит из туалетной воды.'
 			/>
-			<div className='mt-6 flex flex-col gap-y-5'>
+			<div className='mt-6'>
 				<ImprovementDepartment
 					title='УЛУЧШЕНИЕ ПАРФЮМЕРИИ'
 					improve={() => null}
