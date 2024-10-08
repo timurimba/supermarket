@@ -1,4 +1,5 @@
-.control {
+.management {
+	@apply pb-6;
 }
 
 .heading {
@@ -6,7 +7,7 @@
 	> div {
 		@apply shadow-base flex items-center bg-[#EBD2B5] rounded-xl px-3;
 		> span {
-			@apply text-[#484848] font-rubik-one text-shadow;
+			@apply text-[#484848] font-rubik-one text-shadow uppercase;
 		}
 	}
 	> a {

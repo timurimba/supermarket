@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router-dom'
 
 import dollar from '@/assets/images/dollar.svg'
 
-import styles from './ControlDepartment.module.scss'
-import { IControlDepartmentProps } from './control-department.types'
+import styles from './ManagementDepartment.module.scss'
+import { IManagementDepartmentProps } from './management-department.types'
 
-const ControlDepartment: FC<IControlDepartmentProps> = ({
+const ManagementDepartment: FC<IManagementDepartmentProps> = ({
 	title,
 	img,
 	cash,
@@ -31,4 +31,4 @@ const ControlDepartment: FC<IControlDepartmentProps> = ({
 	)
 }
 
-export default ControlDepartment
+export default ManagementDepartment

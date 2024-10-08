@@ -1,0 +1,10 @@
+.cashiers {
+	> div {
+		&:last-child {
+			@apply mt-4 h-[100px] flex justify-center items-center bg-white rounded-xl;
+			> span {
+				@apply text-[#FFB431] text-[40px] font-rubik-one;
+			}
+		}
+	}
+}

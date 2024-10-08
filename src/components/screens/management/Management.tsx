@@ -15,14 +15,14 @@ import vd from '@/assets/images/vegetable-depart.svg'
 
 import { useCustomTranslation } from '@/hooks/useCustomTranslation'
 
-import styles from './Control.module.scss'
-import ControlDepartment from './control-department/ControlDepartment'
+import styles from './Management.module.scss'
+import ManagementDepartment from './management-department/ManagementDepartment'
 
-const Control: FC = () => {
-	const { title, structure, about } = useCustomTranslation('control')
+const Management: FC = () => {
+	const { title, structure, about } = useCustomTranslation('management')
 
 	return (
-		<div className={styles.control}>
+		<div className={styles.management}>
 			<div className='flex m-2 justify-center'>
 				<Title>{title}</Title>
 			</div>
@@ -44,35 +44,35 @@ const Control: FC = () => {
 				</div>
 			</div>
 			<div className={styles.departments}>
-				<ControlDepartment
+				<ManagementDepartment
 					path='/vegetable-department'
 					img={vd}
 					cash={5}
 					expand={() => null}
 					title='Овощной отдел'
 				/>
-				<ControlDepartment
+				<ManagementDepartment
 					path='/bakery'
 					img={bd}
 					cash={5}
 					expand={() => null}
 					title='Пекарня'
 				/>
-				<ControlDepartment
+				<ManagementDepartment
 					img={fd}
 					path='/fish-department'
 					cash={5}
 					expand={() => null}
 					title='Рыбный отдел'
 				/>
-				<ControlDepartment
+				<ManagementDepartment
 					path='/meat-department'
 					img={md}
 					cash={5}
 					expand={() => null}
 					title='Мясной отдел'
 				/>
-				<ControlDepartment
+				<ManagementDepartment
 					img={pd}
 					path='/perfumery'
 					cash={5}
@@ -84,4 +84,4 @@ const Control: FC = () => {
 	)
 }
 
-export default Control
+export default Management
