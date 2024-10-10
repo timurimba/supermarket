@@ -1,8 +1,8 @@
 export const pathsWithExitButton = [
-	'/clothes',
-	'/fish-department',
+	'/clothing',
+	'/fruits',
 	'/bakery',
-	'/meat-department',
+	'/meat',
 	'/perfumery',
-	'/vegetable-department'
+	'/seafood'
 ]

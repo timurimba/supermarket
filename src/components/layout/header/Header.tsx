@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query'
 import { useLocation } from 'react-router-dom'
 
 import ExitButton from '@/components/shared/exit-button/ExitButton'
@@ -8,9 +9,15 @@ import dollar from '@/assets/images/dollar.svg'
 
 import styles from './Header.module.scss'
 import { pathsWithExitButton } from './header.data'
+import { UserService } from '@/services/user.service'
 
 const Header = () => {
 	const { pathname } = useLocation()
+
+	const { data } = useQuery({
+		queryKey: ['user'],
+		queryFn: () => UserService.getInfo()
+	})
 
 	return (
 		<header className={styles.header}>
@@ -23,11 +30,11 @@ const Header = () => {
 			<div>
 				<div>
 					<img src={dollar} alt='' />
-					<span>999</span>
+					<span>${data?.profit}</span>
 				</div>
 				<div>
 					<img src={coin} alt='' />
-					<span>0.09</span>
+					<span>${data?.coin}</span>
 				</div>
 			</div>
 		</header>

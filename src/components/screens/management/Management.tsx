@@ -1,31 +1,31 @@
-import type { FC } from 'react'
+import { useQuery } from '@tanstack/react-query'
+import { type FC } from 'react'
 import { Link } from 'react-router-dom'
 
 import ExitButton from '@/components/shared/exit-button/ExitButton'
 import Title from '@/components/shared/title/Title'
 
-import bd from '@/assets/images/bakery-depart.svg'
 import chart from '@/assets/images/chart.svg'
 import aboutImg from '@/assets/images/control-about.svg'
-import fd from '@/assets/images/fish-depart.svg'
 import hammer from '@/assets/images/hammer.svg'
-import md from '@/assets/images/meat-depart.svg'
-import pd from '@/assets/images/parfume-depart.svg'
-import vd from '@/assets/images/vegetable-depart.svg'
 
 import { useCustomTranslation } from '@/hooks/useCustomTranslation'
 
 import styles from './Management.module.scss'
 import ManagementDepartment from './management-department/ManagementDepartment'
+import { DepartmentService } from '@/services/department.service'
 
 const Management: FC = () => {
 	const { title, structure, about } = useCustomTranslation('management')
 
+	const { data } = useQuery({
+		queryKey: ['departments'],
+		queryFn: () => DepartmentService.getAll()
+	})
+
 	return (
 		<div className={styles.management}>
-			<div className='flex m-2 justify-center'>
-				<Title>{title}</Title>
-			</div>
+			<Title className='flex m-2 justify-center'>{title}</Title>
 			<div className={styles.heading}>
 				<div>
 					<img src={hammer} alt='' />
@@ -44,41 +44,11 @@ const Management: FC = () => {
 				</div>
 			</div>
 			<div className={styles.departments}>
-				<ManagementDepartment
-					path='/vegetable-department'
-					img={vd}
-					cash={5}
-					expand={() => null}
-					title='Овощной отдел'
-				/>
-				<ManagementDepartment
-					path='/bakery'
-					img={bd}
-					cash={5}
-					expand={() => null}
-					title='Пекарня'
-				/>
-				<ManagementDepartment
-					img={fd}
-					path='/fish-department'
-					cash={5}
-					expand={() => null}
-					title='Рыбный отдел'
-				/>
-				<ManagementDepartment
-					path='/meat-department'
-					img={md}
-					cash={5}
-					expand={() => null}
-					title='Мясной отдел'
-				/>
-				<ManagementDepartment
-					img={pd}
-					path='/perfumery'
-					cash={5}
-					expand={() => null}
-					title='Парфюмерия'
-				/>
+				{data
+					? data.map(d => (
+							<ManagementDepartment key={d.name} info={d.info} name={d.name} />
+						))
+					: ''}
 			</div>
 		</div>
 	)

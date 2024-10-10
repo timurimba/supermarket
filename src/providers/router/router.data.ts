@@ -1,6 +1,7 @@
 import Bakery from '@/components/screens/bakery/Bakery'
 import Clothes from '@/components/screens/clothes/Clothes'
 import FishDepartment from '@/components/screens/fish-department/FishDepartment'
+import FruitsDepartment from '@/components/screens/fruits-department/FruitsDepartment'
 import Home from '@/components/screens/home/Home'
 import Indicators from '@/components/screens/indicators/Indicators'
 import Management from '@/components/screens/management/Management'
@@ -11,7 +12,6 @@ import Settings from '@/components/screens/settings/Settings'
 import Shop from '@/components/screens/shop/Shop'
 import SpecialOffer from '@/components/screens/special-offer/SpecialOffer'
 import Tasks from '@/components/screens/tasks/Tasks'
-import VegetableDepartment from '@/components/screens/vegetable-department/VegetableDepartment'
 import Cashiers from '@/components/screens/сashiers/Cashiers'
 
 import { IRoute } from './router.types'
@@ -44,13 +44,13 @@ export const routes: IRoute[] = [
 		mainBg: '#BF7555'
 	},
 	{
-		path: '/clothes',
+		path: '/clothing',
 		component: Clothes,
 		headerBg: '#6FB2D0',
 		mainBg: '#518CA7'
 	},
 	{
-		path: '/fish-department',
+		path: '/seafood',
 		component: FishDepartment,
 		headerBg: '#6FB2D0',
 		mainBg: '#518CA7'
@@ -62,7 +62,7 @@ export const routes: IRoute[] = [
 		mainBg: '#518CA7'
 	},
 	{
-		path: '/meat-department',
+		path: '/meat',
 		component: MeatDepartment,
 		headerBg: '#F0A491',
 		mainBg: '#BF7555'
@@ -98,10 +98,10 @@ export const routes: IRoute[] = [
 		mainBg: '#5E5790'
 	},
 	{
-		path: '/vegetable-department',
-		component: VegetableDepartment,
-		headerBg: '#8B7DF3',
-		mainBg: '#5E5790'
+		path: '/fruits',
+		component: FruitsDepartment,
+		headerBg: '#F0C191',
+		mainBg: '#BB9167'
 	},
 	{
 		path: '/management',

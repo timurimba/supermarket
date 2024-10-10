@@ -1,19 +1,19 @@
-import type { FC } from 'react'
+import { type FC } from 'react'
 
 import ImprovementDepartment from '@/components/shared/improvement-department/ImprovementDepartment'
 import StatisticsDepartment from '@/components/shared/statistics-department/StatisticsDepartment'
 import Title from '@/components/shared/title/Title'
 
-import meat1 from '@/assets/images/meat-1.svg'
-import meat2 from '@/assets/images/meat-2.svg'
-import meat3 from '@/assets/images/meat-3.svg'
-import meat4 from '@/assets/images/meat-4.svg'
+import fruits1 from '@/assets/images/fruits-1.svg'
+import fruits2 from '@/assets/images/fruits-2.svg'
+import fruits3 from '@/assets/images/fruits-3.svg'
+import fruits4 from '@/assets/images/fruits-4.svg'
 
 import { useDepartment } from '@/hooks/useDepartment'
 
 import { EnumDepartmentName } from '@/types/department.types'
 
-const MeatDepartment: FC = () => {
+const FruitsDepartment: FC = () => {
 	const {
 		data,
 		title,
@@ -24,20 +24,22 @@ const MeatDepartment: FC = () => {
 		mutateBuyEmployees,
 		mutateImproveLevel,
 		improve_title
-	} = useDepartment(EnumDepartmentName.MEAT)
+	} = useDepartment(EnumDepartmentName.FRUITS)
 
 	const getImg = () => {
 		switch (data?.current_min_level) {
 			case 1:
-				return meat1
+				return fruits1
 			case 25:
-				return meat2
+				return fruits2
 			case 50:
-				return meat3
+				return fruits3
 			case 75:
-				return meat4
+				return fruits4
 		}
 	}
+
+	console.log(data)
 
 	return (
 		<div>
@@ -69,4 +71,4 @@ const MeatDepartment: FC = () => {
 	)
 }
 
-export default MeatDepartment
+export default FruitsDepartment

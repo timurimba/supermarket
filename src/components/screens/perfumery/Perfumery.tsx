@@ -4,32 +4,67 @@ import ImprovementDepartment from '@/components/shared/improvement-department/Im
 import StatisticsDepartment from '@/components/shared/statistics-department/StatisticsDepartment'
 import Title from '@/components/shared/title/Title'
 
-import parfumeOne from '@/assets/images/parfume-1.svg'
+import parfume1 from '@/assets/images/parfume-1.svg'
+import parfume2 from '@/assets/images/parfume-2.svg'
+import parfume3 from '@/assets/images/parfume-3.svg'
+import parfume4 from '@/assets/images/parfume-4.svg'
 
-import { useCustomTranslation } from '@/hooks/useCustomTranslation'
+import { useDepartment } from '@/hooks/useDepartment'
 
-import styles from './Perfumery.module.scss'
+import { EnumDepartmentName } from '@/types/department.types'
 
 const Perfumery: FC = () => {
-	const { title } = useCustomTranslation('perfumery')
+	const {
+		data,
+		title,
+		titleLvl,
+		descriptionLvl,
+		priceEmployee,
+		priceNextLevel,
+		mutateBuyEmployees,
+		mutateImproveLevel,
+		improve_title
+	} = useDepartment(EnumDepartmentName.PERFUMERY)
+
+	const getImg = () => {
+		switch (data?.current_min_level) {
+			case 1:
+				return parfume1
+			case 25:
+				return parfume2
+			case 50:
+				return parfume3
+			case 75:
+				return parfume4
+		}
+	}
+
 	return (
-		<div className={styles.perfumery}>
-			<div className='flex mt-1 justify-center'>
-				<Title>{title}</Title>
-			</div>
+		<div>
+			<Title className='flex m-2 justify-center'>{title}</Title>
 			<StatisticsDepartment
-				img={parfumeOne}
-				title='Туалетная вода'
-				description='Этот парфюм состоит из туалетной воды.'
+				employees={data?.employees}
+				current_price={data?.current_price}
+				processing={data?.processing}
+				current_level={data?.current_level}
+				img={getImg()}
+				title={titleLvl}
+				description={descriptionLvl}
+				current_max_level={data?.current_max_level}
+				current_min_level={data?.current_min_level}
 			/>
-			<div className='mt-6'>
-				<ImprovementDepartment
-					title='УЛУЧШЕНИЕ ПАРФЮМЕРИИ'
-					improve={() => null}
-					type='base'
-				/>
-				<ImprovementDepartment improve={() => null} type='employee' />
-			</div>
+			<ImprovementDepartment
+				price={priceNextLevel}
+				improve={mutateImproveLevel}
+				title={improve_title}
+				type='base'
+			/>
+			<ImprovementDepartment
+				price={priceEmployee}
+				improve={mutateBuyEmployees}
+				isCompleted={data?.employees === 3}
+				type='employee'
+			/>
 		</div>
 	)
 }
