@@ -9,8 +9,8 @@ import MeatDepartment from '@/components/screens/meat-department/MeatDepartment'
 import Perfumery from '@/components/screens/perfumery/Perfumery'
 import Rating from '@/components/screens/rating/Rating'
 import Settings from '@/components/screens/settings/Settings'
-import Shop from '@/components/screens/shop/Shop'
 import SpecialOffer from '@/components/screens/special-offer/SpecialOffer'
+import Store from '@/components/screens/store/Store'
 import Tasks from '@/components/screens/tasks/Tasks'
 import Cashiers from '@/components/screens/сashiers/Cashiers'
 
@@ -80,8 +80,8 @@ export const routes: IRoute[] = [
 		mainBg: '#939393'
 	},
 	{
-		path: '/shop',
-		component: Shop,
+		path: '/store',
+		component: Store,
 		headerBg: '#8B7DF3',
 		mainBg: '#5E5790'
 	},

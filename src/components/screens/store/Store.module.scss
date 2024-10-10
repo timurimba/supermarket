@@ -1,0 +1,17 @@
+.shop {
+	@apply pb-5;
+	> div {
+		&:last-child {
+			@apply mt-3 bg-white rounded-lg  py-4 px-8;
+			> h1 {
+				@apply font-rubik-one uppercase text-3xl text-[#4F4A72] text-center;
+			}
+			> div {
+				@apply grid grid-cols-2 gap-4 justify-center;
+				@media screen and (max-width: 384px) {
+					@apply flex flex-col;
+				}
+			}
+		}
+	}
+}

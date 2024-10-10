@@ -1,0 +1,30 @@
+.wrapper {
+	@apply w-full relative;
+	&::before {
+		@apply absolute top-2  right-[-6px] bg-[#D68D0D] content-[''] w-full h-[220px] rounded-lg;
+	}
+	> div {
+		@apply bg-[#FBB130]  py-4 h-[220px] flex flex-col justify-between rounded-lg relative;
+		> div {
+			&:first-child {
+				@apply px-5 text-center;
+				> img {
+					@apply mx-auto;
+				}
+				> h1 {
+					@apply mt-2 text-shadow font-rubik-mono text-white;
+				}
+			}
+		}
+		> p {
+			@apply flex justify-center gap-x-1 items-center  p-2 bg-[#fce1b2] font-rubik-one text-shadow  text-[#484848] text-xs;
+			> img {
+				@apply text-shadow;
+			}
+		}
+	}
+	> button {
+		@apply bg-[#B2DDFF] rounded-lg mx-auto w-full py-2  flex justify-center items-center mt-5 text-white text-xl shadow-base;
+		box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.25);
+	}
+}

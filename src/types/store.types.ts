@@ -5,6 +5,13 @@ interface IStoreInfo {
 }
 
 export interface IStore {
-	name: string
+	name: EnumNameStoreItem
 	info: IStoreInfo
+}
+
+export enum EnumNameStoreItem {
+	MANAGER = 'manager',
+	QUALITY = 'quality',
+	SECURITY = 'security',
+	VIDEO = 'video'
 }

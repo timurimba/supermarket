@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { useLocation } from 'react-router-dom'
 
+import { formatPrice } from '@/components/screens/management/management-department/management-department.utils'
 import ExitButton from '@/components/shared/exit-button/ExitButton'
 
 import coin from '@/assets/images/coin.svg'
@@ -30,7 +31,7 @@ const Header = () => {
 			<div>
 				<div>
 					<img src={dollar} alt='' />
-					<span>${data?.profit}</span>
+					<span>${formatPrice(data!.profit)}</span>
 				</div>
 				<div>
 					<img src={coin} alt='' />

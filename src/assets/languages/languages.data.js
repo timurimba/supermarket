@@ -6,6 +6,7 @@ export const resourcesLanguages = {
 				employees: 'employees',
 				processing: 'processing'
 			},
+
 			perfumery: {
 				title: 'PERFUME DEPARTMENT',
 				eau_de_toilet: {
@@ -43,7 +44,24 @@ export const resourcesLanguages = {
 				reward: 'Reward'
 			},
 			shop: {
-				title: 'Shop'
+				title: 'Shop',
+				upgrades: 'UPGRADES',
+				manager: {
+					title: 'GENERAL MANAGER',
+					description: '10h offline earning'
+				},
+				quality: {
+					title: 'QUALITY SEAL',
+					description: 'х2 profits'
+				},
+				security: {
+					title: 'Security Guard',
+					description: 'Increases profitability by 30%, 1 month'
+				},
+				video: {
+					title: 'CCTV CAMERAS',
+					description: 'Increases profitability by 10%, 1 week'
+				}
 			},
 			fruits: {
 				title: 'Fruits section',
@@ -206,7 +224,24 @@ export const resourcesLanguages = {
 				reward: 'Награда'
 			},
 			shop: {
-				title: 'Магазин'
+				title: 'Магазин',
+				upgrades: 'Обновления',
+				manager: {
+					title: 'Главный Менеджер',
+					description: '10ч автономного дохода'
+				},
+				quality: {
+					title: 'знак качества',
+					description: 'х2 прибыли'
+				},
+				security: {
+					title: 'Охранник',
+					description: 'На 30% повышает доходность, 1 месяц'
+				},
+				video: {
+					title: 'КАМЕРЫ НАБЛЮДЕНИЯ',
+					description: 'На 10% повышает доходность, 1 неделя'
+				}
 			},
 			fruits: {
 				title: 'Фруктовый отдел',
