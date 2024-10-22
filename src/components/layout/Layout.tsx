@@ -23,7 +23,6 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
 	const route = routes.find(r => r.path === pathname)!
 
 	const { i18n } = useTranslation()
-
 	useEffect(() => {
 		const languageCodeFromLs = localStorage.getItem('language_code')
 		if (languageCodeFromLs) {
