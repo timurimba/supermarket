@@ -1,10 +1,10 @@
 .home {
-	@apply flex-1 pb-2 flex flex-col justify-between;
+	@apply flex-1 pb-2 flex flex-col   justify-between;
 	> div {
-		&:first-child {
+		&:nth-child(2) {
 			@apply mt-3 flex items-center justify-between;
 			> div {
-				@apply flex items-center gap-x-2;
+				@apply flex items-center relative z-10 gap-x-2;
 				> a {
 					@apply w-[60px] h-[60px] bg-white border-[#B7B7B7] border-solid border-[5px] rounded-xl flex items-center justify-center;
 				}
@@ -22,10 +22,10 @@
 		&:last-child {
 			> div {
 				&:first-child {
-					@apply ml-auto mb-2 bg-[#909090] bg-opacity-[0.87] shadow-base w-fit p-3 rounded-xl;
+					@apply ml-auto mb-2 bg-[#909090] bg-opacity-[0.87] shadow-base w-fit p-3 rounded-xl relative z-10;
 				}
 				&:last-child {
-					@apply flex bg-white bg-opacity-85 items-center justify-between px-[6px] py-2 gap-x-2 rounded-xl;
+					@apply flex bg-white bg-opacity-85 items-center justify-between px-[6px] py-2 gap-x-2 rounded-xl relative z-10;
 					> a {
 						@apply shadow-base bg-white p-2 rounded-xl w-[92px] h-[95px] flex items-center justify-center;
 					}

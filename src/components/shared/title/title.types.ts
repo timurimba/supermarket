@@ -1,3 +1,3 @@
 export interface ITitleProps {
-	className: string
+	className?: string
 }

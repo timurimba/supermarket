@@ -24,19 +24,17 @@ const ImprovementDepartment: FC<IImprovementDepartmentProps> = ({
 		queryKey: ['user'],
 		queryFn: () => UserService.getInfo()
 	})
-	const { hire, upgrade } = useCustomTranslation('improvement')
+
+	const { hire, upgrade, hire_info, upgrade_info, hire_employee } =
+		useCustomTranslation('improvement')
 
 	return (
 		<div className={styles.wrapper}>
 			<div>
 				<img src={type === 'base' ? base : employee} alt='' />
 				<div>
-					<strong>{type === 'employee' ? 'НАНЯТЬ СОТРУДНИКОВ' : title}</strong>
-					<p>
-						{type === 'employee'
-							? 'Увеличивает количество сотрудников на 1'
-							: 'Увеличивает прибыль'}
-					</p>
+					<strong>{type === 'employee' ? hire_employee : title}</strong>
+					<p>{type === 'employee' ? hire_info : upgrade_info}</p>
 				</div>
 			</div>
 			<button

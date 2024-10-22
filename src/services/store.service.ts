@@ -1,18 +1,23 @@
 import { instance } from '@/api/api.config'
 
-import { IShopItem } from '@/types/shop.types'
+import { IStore } from '@/types/store.types'
 
 const BASE = '/store'
 
 export const StoreService = {
 	getAll: async () => {
-		const { data } = await instance.get<IShopItem[]>(`${BASE}/item`)
+		const { data } = await instance.get<IStore[]>(`${BASE}/item`)
 
 		return data
 	},
 	buy: async (name: string) => {
-		return await instance.post(`${BASE}/items/buy`, {
-			item_name: name
-		})
+		const { data } = await instance.post<string>(
+			`${BASE}/items/buy?item_name=${name}`
+		)
+		return data
+	},
+	getSpecialOffer: async () => {
+		const { data } = await instance.get<IStore>(`${BASE}/special_offer`)
+		return data
 	}
 }

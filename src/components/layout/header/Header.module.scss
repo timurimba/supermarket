@@ -1,11 +1,11 @@
 .header {
-	@apply pl-2 pr-3 pt-6;
+	@apply pl-2 pr-3 relative  pt-6;
 	> div {
 		&:first-child {
 			@apply flex items-center justify-between;
-			> button {
+			> a {
 				&:first-child {
-					@apply bg-white  justify-center items-center flex w-[50px] h-[50px] rounded-xl;
+					@apply bg-white  justify-center items-center flex w-[50px] h-[50px] rounded-xl relative z-10;
 					> img {
 						@apply mt-[10px];
 					}
@@ -16,7 +16,7 @@
 		&:last-child {
 			@apply flex mt-2 justify-between items-center;
 			> div {
-				@apply bg-white w-[140px] flex justify-evenly h-[30px] items-center rounded-xl shadow-base;
+				@apply bg-white w-[140px] flex justify-evenly h-[30px] items-center rounded-xl shadow-base z-10 relative;
 				> img {
 					@apply text-shadow;
 				}
@@ -26,7 +26,7 @@
 					}
 				}
 				&:last-child {
-					@apply relative;
+					@apply relative z-10;
 					> span {
 						@apply text-[#FAA300] text-xl mr-6;
 					}

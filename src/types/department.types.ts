@@ -23,6 +23,14 @@ export interface IDepartmentNextLevel {
 	price: number
 }
 
+export interface IDepartmentIndicator {
+	name: string
+	current_price: number
+	current_level: number
+	current_level_name: string
+	profit: number
+}
+
 export enum EnumDepartmentName {
 	BAKERY = 'bakery',
 	FRUITS = 'fruits',

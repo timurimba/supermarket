@@ -1,13 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
 import { type FC } from 'react'
-import { Link } from 'react-router-dom'
 
-import ExitButton from '@/components/shared/exit-button/ExitButton'
+import HeadingManagement from '@/components/shared/heading-management/HeadingManagement'
 import Title from '@/components/shared/title/Title'
 
-import chart from '@/assets/images/chart.svg'
 import aboutImg from '@/assets/images/control-about.svg'
-import hammer from '@/assets/images/hammer.svg'
 
 import { useCustomTranslation } from '@/hooks/useCustomTranslation'
 
@@ -26,16 +23,7 @@ const Management: FC = () => {
 	return (
 		<div className={styles.management}>
 			<Title className='flex m-2 justify-center'>{title}</Title>
-			<div className={styles.heading}>
-				<div>
-					<img src={hammer} alt='' />
-					<span>{structure}</span>
-				</div>
-				<Link to={'/indicators'}>
-					<img src={chart} alt='' />
-				</Link>
-				<ExitButton />
-			</div>
+			<HeadingManagement text={structure} />
 			<div className={styles.about}>
 				<img src={aboutImg} alt='' />
 				<div>

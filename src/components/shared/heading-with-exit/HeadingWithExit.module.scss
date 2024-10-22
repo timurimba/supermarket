@@ -1,3 +1,6 @@
 .wrapper {
-	@apply flex w-[70%] ml-auto justify-between mt-12  items-center;
+	@apply flex justify-between mt-12  items-center;
+	> h1 {
+		@apply flex-1 text-center ml-10;
+	}
 }

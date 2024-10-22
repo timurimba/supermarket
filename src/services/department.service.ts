@@ -3,6 +3,7 @@ import { instance } from '@/api/api.config'
 import {
 	EnumDepartmentName,
 	IDepartment,
+	IDepartmentIndicator,
 	IDepartmentManagement,
 	IDepartmentNextLevel
 } from '@/types/department.types'
@@ -43,5 +44,12 @@ export const DepartmentService = {
 	},
 	buyEmployees: async (name: EnumDepartmentName) => {
 		return await instance.post(`${BASE}/${name}/employee/hire`)
+	},
+	getIndicators: async () => {
+		const { data } = await instance.get<IDepartmentIndicator[]>(
+			`${BASE}/profit`
+		)
+
+		return data
 	}
 }

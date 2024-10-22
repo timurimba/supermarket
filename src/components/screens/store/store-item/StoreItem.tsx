@@ -1,17 +1,40 @@
+import { useMutation } from '@tanstack/react-query'
 import cn from 'clsx'
+import { Check } from 'lucide-react'
 import type { FC } from 'react'
 
+import ButtonStar from '@/components/shared/button-star/ButtonStar'
+import Loader from '@/components/shared/loader/Loader'
+
 import dollar from '@/assets/images/dollar.svg'
-import star from '@/assets/images/star.svg'
 
 import { useCustomTranslation } from '@/hooks/useCustomTranslation'
 
 import styles from './StoreItem.module.scss'
 import { IStoreItemProps } from './store-item.types'
+import { StoreService } from '@/services/store.service'
 import { EnumNameStoreItem } from '@/types/store.types'
 
 const StoreItem: FC<IStoreItemProps> = ({ name, info, img }) => {
 	const { title, description } = useCustomTranslation(`shop.${name}`)
+	const { mutate, isPending } = useMutation({
+		mutationKey: ['buy'],
+		mutationFn: () => StoreService.buy(name),
+		onSuccess: data => {
+			window.open(data, '_blank')
+		}
+	})
+
+	const getContent = () => {
+		if (isPending) {
+			return <Loader />
+		}
+		if (info.exists) {
+			return <Check size={30} />
+		}
+
+		return info.price
+	}
 
 	return (
 		<div className={styles.wrapper}>
@@ -29,10 +52,9 @@ const StoreItem: FC<IStoreItemProps> = ({ name, info, img }) => {
 					{description}
 				</p>
 			</div>
-			<button>
-				{info.price}
-				<img src={star} alt='' />
-			</button>
+			<ButtonStar disabled={isPending || info.exists} buy={mutate}>
+				{getContent()}
+			</ButtonStar>
 		</div>
 	)
 }

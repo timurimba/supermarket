@@ -24,7 +24,7 @@
 .button {
 	@apply mt-2 bg-[#87C443] h-[64px] rounded-lg p-1 block w-full;
 	> span {
-		@apply text-white font-rubik-one text-xl text-shadow;
+		@apply text-white uppercase font-rubik-one text-xl text-shadow;
 	}
 	> div {
 		@apply gap-x-2 flex items-center justify-center;

@@ -4,12 +4,9 @@ import ImprovementDepartment from '@/components/shared/improvement-department/Im
 import StatisticsDepartment from '@/components/shared/statistics-department/StatisticsDepartment'
 import Title from '@/components/shared/title/Title'
 
-import clothing1 from '@/assets/images/clothing-1.svg'
-import clothing2 from '@/assets/images/clothing-2.svg'
-import clothing3 from '@/assets/images/clothing-3.svg'
-import clothing4 from '@/assets/images/clothing-4.svg'
-
 import { useDepartment } from '@/hooks/useDepartment'
+
+import { getImgDepartment } from '@/utils/get-img-department.utils'
 
 import { EnumDepartmentName } from '@/types/department.types'
 
@@ -26,28 +23,15 @@ const Clothes: FC = () => {
 		improve_title
 	} = useDepartment(EnumDepartmentName.CLOTHING)
 
-	const getImg = () => {
-		switch (data?.current_min_level) {
-			case 1:
-				return clothing1
-			case 25:
-				return clothing2
-			case 50:
-				return clothing3
-			case 75:
-				return clothing4
-		}
-	}
-
 	return (
 		<div>
-			<Title className='flex m-2 justify-center'>{title}</Title>
+			<Title className='m-2'>{title}</Title>
 			<StatisticsDepartment
 				employees={data?.employees}
 				current_price={data?.current_price}
 				processing={data?.processing}
 				current_level={data?.current_level}
-				img={getImg()}
+				img={getImgDepartment(data?.current_level_name)}
 				title={titleLvl}
 				description={descriptionLvl}
 				current_max_level={data?.current_max_level}

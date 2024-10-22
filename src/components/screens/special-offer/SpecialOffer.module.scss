@@ -1,0 +1,34 @@
+.wrapper {
+	@apply pb-10;
+	> div {
+		&:nth-child(2) {
+			@apply flex mt-12 flex-col items-center;
+			> div {
+				@apply relative -mt-10;
+				> p {
+					@apply uppercase absolute top-[13px] left-[18%] text-[14px] text-[#FFEAC0] font-rubik-one text-shadow;
+				}
+			}
+		}
+		&:nth-child(3) {
+			@apply shadow-base my-6 bg-[#D5D4D4] rounded-xl p-2 pb-12;
+			> p {
+				@apply mt-4 text-center text-shadow text-white font-rubik-one text-xl;
+			}
+			> div {
+				@apply flex flex-col items-center rounded-md py-4 px-6 bg-white;
+				box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+				> h2 {
+					@apply text-center text-[#484848] font-rubik-one;
+				}
+				> div {
+					@apply p-1 flex w-[154px] bg-[#FCAF17] rounded-lg flex-col items-center;
+					box-shadow: inset 0 -3px 4px rgba(0, 0, 0, 0.25);
+					> span {
+						@apply lowercase text-shadow font-rubik-one text-[#FFEAC0];
+					}
+				}
+			}
+		}
+	}
+}

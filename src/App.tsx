@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import Layout from './components/layout/Layout'
 import RouterProvider from './providers/router/RouterProvider'
+import SoundProvider from './providers/sound/SoundProvider'
 import TanstackQuery from './providers/tanstack-query/TanstackQuery'
 
 const App: FC = () => {
@@ -12,10 +13,12 @@ const App: FC = () => {
 		<WebAppProvider>
 			<Router>
 				<TanstackQuery>
-					<Layout>
-						<Toaster />
-						<RouterProvider />
-					</Layout>
+					<SoundProvider>
+						<Layout>
+							<Toaster />
+							<RouterProvider />
+						</Layout>
+					</SoundProvider>
 				</TanstackQuery>
 			</Router>
 		</WebAppProvider>

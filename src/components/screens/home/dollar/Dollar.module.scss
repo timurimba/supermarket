@@ -1,0 +1,30 @@
+.dollar {
+	@apply absolute top-[48%] left-[43%] w-[15px] h-[15px] text-shadow;
+	animation: fadeInScale 0.5s ease-in-out;
+}
+
+@keyframes fadeInScale {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeOutScale {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
+.fade-out {
+	animation: fadeOutScale 0.5s ease-in-out forwards #{!important};
+}

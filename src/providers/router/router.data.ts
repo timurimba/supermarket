@@ -20,10 +20,8 @@ export const routes: IRoute[] = [
 	{
 		path: '/',
 		component: Home,
-		// headerBg: 'transparent',
-		// mainBg: 'transparent'
-		headerBg: '#F0C191',
-		mainBg: '#BB9167'
+		headerBg: '#EBD2B5',
+		mainBg: '#EBD2B5'
 	},
 	{
 		path: '/rating',

@@ -5,7 +5,7 @@
 		@apply text-shadow;
 	}
 	> span {
-		@apply text-center font-rubik-one text-xl text-[#484848];
+		@apply text-center font-rubik-one text-xl capitalize  text-[#484848];
 	}
 	> button {
 		@apply w-[70px] flex-shrink-0 rounded-lg p-3 px-4 h-[70px] bg-[#87C443];

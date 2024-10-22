@@ -1,6 +1,5 @@
 import cn from 'clsx'
 import type { FC } from 'react'
-import { Link } from 'react-router-dom'
 
 import dollar from '@/assets/images/dollar.svg'
 import human from '@/assets/images/human.svg'
@@ -10,8 +9,17 @@ import { useCustomTranslation } from '@/hooks/useCustomTranslation'
 import styles from './Task.module.scss'
 import { ITask } from '@/types/task.types'
 
-const Task: FC<ITask> = ({ name }) => {
+const Task: FC<ITask> = ({ name, link }) => {
 	const { subscribe, invite, get, reward } = useCustomTranslation('tasks')
+
+	const getLink = () => {
+		if (name === 'invitation') {
+			return `https://t.me/share/url?url=${encodeURIComponent(`Hi, sign-up: ${link}`)}`
+		} else {
+			return link
+		}
+	}
+
 	return (
 		<div className={styles.task}>
 			<strong>{name === 'subscribe_channel' ? subscribe : invite}</strong>
@@ -19,22 +27,23 @@ const Task: FC<ITask> = ({ name }) => {
 				<span>{reward}:</span>
 				<span
 					className={
-						name === 'invitation' ? 'text-[#384868]' : 'text-[#599939]'
+						name === 'subscribe_channel' ? 'text-[#384868]' : 'text-[#599939]'
 					}
 				>
 					1000
 				</span>
-				<img src={name === 'subscribe_channel' ? dollar : human} alt='' />
+				<img src={name === 'subscribe_channel' ? human : dollar} alt='' />
 			</div>
-			<Link
+			<a
 				className={cn(styles.link, {
-					'bg-[#599939]': name === 'subscribe_channel',
-					'bg-[#384868]': name === 'invitation'
+					'bg-[#599939]': name === 'invitation',
+					'bg-[#384868]': name === 'subscribe_channel'
 				})}
-				to={'#'}
+				href={getLink()}
+				target='_blank'
 			>
 				{get}
-			</Link>
+			</a>
 		</div>
 	)
 }

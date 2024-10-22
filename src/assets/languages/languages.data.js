@@ -1,14 +1,39 @@
 export const resourcesLanguages = {
 	en: {
 		translation: {
+			rating: {
+				title: 'Rating',
+				place: 'Place',
+				nickname: 'Nickname',
+				token: 'Token'
+			},
+			settings: {
+				title: 'settings',
+				language: 'Language',
+				russian: 'Русский',
+				english: 'English',
+				settingsAudio: 'Audio Control',
+				music: 'Music',
+				sound: 'Sound',
+				ourChannel: 'Our Channel',
+				support: 'Support'
+			},
 			statistics_department: {
 				price: 'price',
 				employees: 'employees',
 				processing: 'processing'
 			},
-
+			special_offer: {
+				title: 'SPECIAL OFFER',
+				who: 'GENERAL MANAGER',
+				subtitle: 'KEEP YOUR STORE OPEN FOR ',
+				description:
+					'With the general manager, your supermarket will keep working for much longer while you are not playing.',
+				hours: '10h',
+				extra: 'extra'
+			},
 			perfumery: {
-				title: 'PERFUME DEPARTMENT',
+				title: 'Perfume Department',
 				eau_de_toilet: {
 					titleLvl: 'Eau de toilet',
 					descriptionLvl: 'This perfume is formulated with toilet water.'
@@ -30,17 +55,26 @@ export const resourcesLanguages = {
 			management: {
 				title: 'Management',
 				structure: 'Structure',
-				about: 'Here you can open and expand premises in the supermarket'
+				about:
+					'Here you can build and expland the supermarket^s departaments and facilities to increase your profit.'
+			},
+			indicators: {
+				title: 'Management',
+				indicators: 'Stats',
+				description: 'Here yoy can see the overall status of your supermarket',
+				profit: 'Profit',
+				price: 'Price',
+				min: 'per min'
 			},
 			cashiers: {
 				title: 'Cashiers',
-				soon: 'Soon'
+				soon: 'Coming Soon'
 			},
 			tasks: {
-				title: 'Tasks',
+				title: 'Missions',
 				subscribe: 'Subscribe to the channel',
 				invite: 'Invite a friend',
-				get: 'Get',
+				get: 'Claim',
 				reward: 'Reward'
 			},
 			shop: {
@@ -108,7 +142,7 @@ export const resourcesLanguages = {
 				improve_title: 'UPGRADE BAKERY'
 			},
 			seafood: {
-				title: 'SEAFOOD DEPARTMENT',
+				title: 'Seafood Department',
 				something: {
 					titleLvl: "What's that?",
 					descriptionLvl:
@@ -129,7 +163,7 @@ export const resourcesLanguages = {
 				improve_title: 'UPGRADE SEAFOOD DEPARTMENT'
 			},
 			clothing: {
-				title: 'CLOTHING DEPARTMENT',
+				title: 'Clothing Department',
 				short_socks: {
 					titleLvl: 'Short socks',
 					descriptionLvl: "So short that they'll only cover toes."
@@ -151,7 +185,7 @@ export const resourcesLanguages = {
 				improve_title: 'UPGRADE CLOTHING DEPARTMENT'
 			},
 			meat: {
-				title: 'BUTCHER SHOP',
+				title: 'Butcher Shop',
 				dubious_meat: {
 					titleLvl: 'Dubious meat',
 					descriptionLvl:
@@ -175,6 +209,7 @@ export const resourcesLanguages = {
 			improvement: {
 				upgrade: 'upgrade',
 				hire: 'hire',
+				hire_employee: 'hire employee',
 				upgrade_info: 'Increases profits',
 				hire_info:
 					'Increases the number of employees working in the store by +1.'
@@ -183,10 +218,44 @@ export const resourcesLanguages = {
 	},
 	ru: {
 		translation: {
+			rating: {
+				title: 'Рейтинг',
+				place: 'Место',
+				nickname: 'Никнейм',
+				token: 'Токены'
+			},
+			settings: {
+				title: 'Настройки',
+				language: 'Язык',
+				russian: 'Русский',
+				english: 'English',
+				settingsAudio: 'Настройка аудио',
+				music: 'Музыка',
+				sound: 'Звук',
+				ourChannel: 'Наш Telegram',
+				support: 'Поддержка'
+			},
+			indicators: {
+				title: 'Управление',
+				indicators: 'Показатели',
+				description: 'Здесь вы можете посмотреть статус своего супермаркета',
+				min: 'в мин',
+				price: 'Стоимость',
+				profit: 'Прибыль'
+			},
 			statistics_department: {
 				price: 'цена',
 				employees: 'сотрудники',
 				processing: 'обрабатывается'
+			},
+			special_offer: {
+				title: 'СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ',
+				who: 'Главный менеджер',
+				subtitle: 'ДЕРЖИТ МАГАЗИН ОТКРЫТЫМ ЕЩЕ',
+				description:
+					'При поддержке менеджера, ваш магазин будет работать намного дольше при вашем отсутствие',
+				hours: '10Ч',
+				extra: 'дополнительно'
 			},
 			perfumery: {
 				title: 'Парфюмерия',

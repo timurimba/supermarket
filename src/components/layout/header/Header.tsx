@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import { formatPrice } from '@/components/screens/management/management-department/management-department.utils'
 import ExitButton from '@/components/shared/exit-button/ExitButton'
@@ -23,19 +23,19 @@ const Header = () => {
 	return (
 		<header className={styles.header}>
 			<div>
-				<button>
+				<Link to='/rating'>
 					<img src={cup} alt='' />
-				</button>
+				</Link>
 				{pathsWithExitButton.includes(pathname) && <ExitButton />}
 			</div>
 			<div>
 				<div>
 					<img src={dollar} alt='' />
-					<span>${formatPrice(data!.profit)}</span>
+					<span>${formatPrice(data ? data.profit : 0)}</span>
 				</div>
 				<div>
 					<img src={coin} alt='' />
-					<span>${data?.coin}</span>
+					<span>${formatPrice(data ? data.coin : 0)}</span>
 				</div>
 			</div>
 		</header>

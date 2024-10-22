@@ -1,0 +1,19 @@
+.heading {
+	@apply flex mt-2 gap-x-7 justify-end;
+	> a {
+		@apply shadow-base gap-x-1 flex items-center bg-[#EBD2B5] rounded-xl px-3;
+		> span {
+			@apply text-[#484848] font-rubik-one text-shadow uppercase;
+		}
+		&:first-child {
+			@media screen and (max-width: 360px) {
+				> span {
+					@apply text-sm;
+				}
+				> img {
+					@apply w-[45px];
+				}
+			}
+		}
+	}
+}

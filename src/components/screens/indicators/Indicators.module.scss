@@ -1,0 +1,16 @@
+.indicators {
+	> div {
+		&:nth-child(3) {
+			@apply shadow-base bg-white my-3 rounded-xl p-4 flex items-center gap-x-6;
+			> div {
+				@apply text-center;
+				> strong {
+					@apply text-shadow text-[#484848] text-2xl uppercase font-rubik-one;
+				}
+				> p {
+					@apply text-[#484848] font-rubik-one text-shadow text-[15px];
+				}
+			}
+		}
+	}
+}
