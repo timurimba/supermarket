@@ -1,9 +1,6 @@
 FROM oven/bun:latest as builder
 WORKDIR /app
 
-ARG API_URL
-
-ENV VITE_API_URL=${API_URL}
 COPY bun.lockb package.json ./
 RUN bun install
 COPY . .
