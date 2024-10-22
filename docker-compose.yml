@@ -4,10 +4,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    environment:
-      - VITE_API_URL=https://supermarket-back.pro
+      args:
+        API_URL: https://supermarket-back.pro
     ports:
-      - "80:80"
+      - "443:443"
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt:ro
     network_mode: "host"
