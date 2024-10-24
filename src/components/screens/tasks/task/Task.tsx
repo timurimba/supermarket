@@ -10,7 +10,8 @@ import styles from './Task.module.scss'
 import { ITask } from '@/types/task.types'
 
 const Task: FC<ITask> = ({ name, link }) => {
-	const { subscribe, invite, get, reward } = useCustomTranslation('tasks')
+	const { subscribe, invite, get, reward, hours } =
+		useCustomTranslation('tasks')
 
 	const getLink = () => {
 		if (name === 'invitation') {
@@ -30,7 +31,7 @@ const Task: FC<ITask> = ({ name, link }) => {
 						name === 'subscribe_channel' ? 'text-[#384868]' : 'text-[#599939]'
 					}
 				>
-					1000
+					{name === 'invitation' ? 1000 : hours}
 				</span>
 				<img src={name === 'subscribe_channel' ? human : dollar} alt='' />
 			</div>

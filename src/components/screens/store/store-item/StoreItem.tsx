@@ -1,4 +1,5 @@
 import { useMutation } from '@tanstack/react-query'
+import { openLink } from '@telegram-apps/sdk-react'
 import cn from 'clsx'
 import { Check } from 'lucide-react'
 import type { FC } from 'react'
@@ -21,7 +22,7 @@ const StoreItem: FC<IStoreItemProps> = ({ name, info, img }) => {
 		mutationKey: ['buy'],
 		mutationFn: () => StoreService.buy(name),
 		onSuccess: data => {
-			window.open(data, '_blank')
+			openLink(data)
 		}
 	})
 

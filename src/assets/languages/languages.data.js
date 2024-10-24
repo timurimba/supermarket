@@ -75,7 +75,8 @@ export const resourcesLanguages = {
 				subscribe: 'Subscribe to the channel',
 				invite: 'Invite a friend',
 				get: 'Claim',
-				reward: 'Reward'
+				reward: 'Reward',
+				hours: '8h'
 			},
 			shop: {
 				title: 'Shop',
@@ -290,7 +291,8 @@ export const resourcesLanguages = {
 				subscribe: 'Подписаться на канал',
 				invite: 'Пригласить друга',
 				get: 'Получить',
-				reward: 'Награда'
+				reward: 'Награда',
+				hours: '8ч'
 			},
 			shop: {
 				title: 'Магазин',

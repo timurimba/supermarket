@@ -1,4 +1,4 @@
-import { type FC, useRef, useState } from 'react'
+import { type FC, TouchEvent, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import bg from '@/assets/images/bg-tycon.jpg'
@@ -23,7 +23,7 @@ const Home: FC = () => {
 	const imageRef = useRef<HTMLImageElement | null>(null)
 	const lastTouchRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 })
 
-	const handleTouchMove = (e: any) => {
+	const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
 		if (e.touches.length === 1) {
 			const touch = e.touches[0]
 			const deltaX = touch.clientX - lastTouchRef.current.x
@@ -57,7 +57,7 @@ const Home: FC = () => {
 		}
 	}
 
-	const handleTouchStart = (e: any) => {
+	const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
 		if (e.touches.length === 1) {
 			lastTouchRef.current = {
 				x: e.touches[0].clientX,
