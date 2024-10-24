@@ -1,6 +1,6 @@
 export interface IRating {
 	tg_login: string
-	profit: number
+	coin: number
 }
 
 export interface IRatingResponse {

@@ -11,9 +11,9 @@ import cupOther from '@/assets/images/cup-other.svg'
 
 import { useCustomTranslation } from '@/hooks/useCustomTranslation'
 
+import { UserService } from '@/services/user.service'
 import styles from './Rating.module.scss'
 import RatingItem from './rating-item/RatingItem'
-import { UserService } from '@/services/user.service'
 
 const Rating: FC = () => {
 	const { title, place, nickname, token } = useCustomTranslation('rating')
@@ -71,7 +71,7 @@ const Rating: FC = () => {
 											key={r.tg_login}
 											img={getImg(index + 1)}
 											tg_login={r.tg_login}
-											profit={r.profit}
+											coin={r.coin}
 										/>
 									)
 								})
