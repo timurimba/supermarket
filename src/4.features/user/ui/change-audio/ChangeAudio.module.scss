@@ -1,0 +1,26 @@
+.audio {
+	@apply flex items-center  gap-x-2;
+	> span {
+		@apply text-[#5B7CE2] font-semibold;
+	}
+	> label {
+		@apply cursor-pointer;
+		> input {
+			@apply hidden;
+			&:checked + div {
+				@apply bg-[#34C759];
+				> div {
+					@apply translate-x-[95%];
+				}
+			}
+		}
+
+		> div {
+			@apply transition-colors duration-300 bg-gray-300 p-[2px] w-[44px] h-6 rounded-full;
+
+			> div {
+				@apply bg-white transition-transform duration-300 w-5 h-5 rounded-full;
+			}
+		}
+	}
+}

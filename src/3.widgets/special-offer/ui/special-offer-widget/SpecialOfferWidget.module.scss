@@ -1,0 +1,12 @@
+.wrapper {
+	@apply bg-white rounded-xl p-6;
+	> div:nth-child(2) {
+		@apply mt-3 max-w-[176px] bg-[#746ACD] py-2 mx-auto text-center rounded-md text-white font-semibold;
+	}
+	> h2 {
+		@apply text-[#1928C1] font-bold text-center text-lg;
+	}
+	> p {
+		@apply text-sm text-[#5B7CE2] mb-9 mt-7 text-center;
+	}
+}

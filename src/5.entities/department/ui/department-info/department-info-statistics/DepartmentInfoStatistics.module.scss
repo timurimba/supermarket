@@ -1,0 +1,33 @@
+.statistics {
+	@apply flex justify-between items-center mt-[23px] mb-[14px];
+	> div {
+		@apply flex flex-col items-center gap-y-[10px];
+		> span {
+			@apply text-[11px] font-semibold;
+		}
+		> h5 {
+			@apply text-[11px] font-semibold lowercase;
+		}
+		> div {
+			@apply w-[70px] h-[70px] rounded-full flex items-center justify-center;
+		}
+		&:first-child {
+			@apply text-[#23A54A];
+			> div {
+				@apply bg-[#E5F5D4];
+			}
+		}
+		&:first-child + div {
+			@apply text-[#DD601B];
+			> div {
+				@apply bg-[#F4D4C3];
+			}
+		}
+		&:last-child {
+			@apply text-[#FFB605];
+			> div {
+				@apply bg-[#FFF1CE];
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+.heading {
+	@apply flex items-center gap-x-8;
+	> div {
+		> h1 {
+			@apply text-[#1928C1] font-bold;
+		}
+		> p {
+			@apply text-[#5B7CE2] text-sm;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+.cashiers {
+	@apply flex flex-col flex-1;
+	> div {
+		&:last-child {
+			@apply mt-5 rounded-tl-3xl bg-[#6FB2D0] rounded-tr-3xl flex-1 p-5 pb-3;
+			> div {
+				@apply bg-white h-[80px] uppercase flex justify-center items-center rounded-xl text-[#1928C1] font-bold text-[38px];
+			}
+		}
+	}
+}

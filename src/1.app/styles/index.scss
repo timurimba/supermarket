@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'SF Compact Display';
+	font-weight: 500;
+	src:
+		url('../assets/fonts/SF-Compact-Display-Medium.woff2') format('woff2'),
+		url('assets/fonts/SF-Compact-Display-Medium.woff') format('woff'),
+		url('assets/fonts/SF-Compact-Display-Medium.eot') format('eot'),
+		url('assets/fonts/SF-Compact-Display-Medium.ttf') format('ttf'),
+		url('assets/fonts/SF-Compact-Display-Medium.otf') format('otf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SF Compact Display';
+	font-weight: 600;
+	src:
+		url('../assets/fonts/SF-Compact-Display-Semibold.woff2') format('woff2'),
+		url('assets/fonts/SF-Compact-Display-Semibold.woff') format('woff'),
+		url('assets/fonts/SF-Compact-Display-Semibold.eot') format('eot'),
+		url('assets/fonts/SF-Compact-Display-Semibold.ttf') format('ttf'),
+		url('assets/fonts/SF-Compact-Display-Semibold.otf') format('otf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SF Compact Display';
+	font-weight: 700;
+	src:
+		url('../assets/fonts/SF-Compact-Display-Bold.woff2') format('woff2'),
+		url('assets/fonts/SF-Compact-Display-Bold.woff') format('woff'),
+		url('assets/fonts/SF-Compact-Display-Bold.eot') format('eot'),
+		url('assets/fonts/SF-Compact-Display-Bold.ttf') format('ttf'),
+		url('assets/fonts/SF-Compact-Display-Bold.otf') format('otf');
+	font-display: swap;
+}
+
+* {
+	@apply m-0 p-0;
+	box-sizing: border-box;
+	user-select: none;
+}
+
+body,
+html {
+	@apply overflow-hidden;
+	font-family: 'SF Compact Display', sans-serif;
+}
+
+#root {
+	@apply h-screen overflow-y-scroll;
+}
+
+button {
+	@apply bg-transparent transition-all block  border-none outline-none cursor-pointer active:scale-95;
+}

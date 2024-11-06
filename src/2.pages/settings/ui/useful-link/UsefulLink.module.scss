@@ -1,0 +1,9 @@
+.useful {
+	@apply bg-white mt-[14px] rounded-lg p-[14px] flex items-center gap-x-[22px];
+	> div {
+		@apply bg-[#5B7CE2] flex justify-center items-center w-[57px] h-[57px] rounded-lg;
+	}
+	> span {
+		@apply text-[#1928C1] font-semibold text-lg;
+	}
+}

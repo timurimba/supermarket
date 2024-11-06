@@ -1,0 +1,11 @@
+.execute {
+	@apply uppercase rounded-md text-white font-semibold w-[100px] h-[52px] flex items-center justify-center;
+	&.subscription {
+		@apply bg-[#384868];
+		box-shadow: inset 0 -5px 0 0 #2c364d;
+	}
+	&.invitation {
+		@apply bg-[#86C342];
+		box-shadow: inset 0 -5px 0 0 #4e9e1f;
+	}
+}

@@ -1,0 +1,33 @@
+.wrapper {
+	@apply relative flex-1;
+	> div {
+		&:first-child {
+			@apply grid grid-cols-3 rounded-lg py-4 bg-[#FFB03A] px-[14px];
+			> span {
+				@apply text-white  font-semibold text-lg;
+				&:nth-child(2) {
+					@apply text-center;
+				}
+				&:last-child {
+					@apply text-end;
+				}
+			}
+		}
+	}
+}
+
+.myRating {
+	@apply absolute z-50 w-full left-0 bottom-7 grid grid-cols-3 px-[14px] h-[58px] items-center bg-[#1928C1];
+	> strong {
+		@apply text-white  ml-1 font-semibold text-[32px];
+	}
+	> span {
+		@apply text-white text-center  font-bold;
+	}
+	> div {
+		@apply flex items-center justify-end  gap-x-1;
+		> span {
+			@apply text-white font-semibold text-[15px];
+		}
+	}
+}

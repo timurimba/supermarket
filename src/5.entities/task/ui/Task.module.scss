@@ -1,0 +1,15 @@
+.task {
+	@apply bg-white rounded-lg overflow-hidden flex  justify-between gap-x-1 relative p-3 pl-9;
+	&::before {
+		@apply absolute top-0 left-0 w-[25px] h-full content-[''] block bg-[#FFB240];
+	}
+	> div {
+		@apply text-[#5B7CE2];
+		> h3 {
+			@apply text-[#1928C1] font-bold;
+		}
+		> span {
+			@apply text-[#28BF55];
+		}
+	}
+}

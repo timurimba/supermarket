@@ -1,0 +1,8 @@
+.rating {
+	@apply flex flex-col flex-1;
+	> div {
+		&:last-child {
+			@apply mt-5 bg-[#596ABE] flex flex-col  rounded-tl-3xl rounded-tr-3xl flex-1 p-5 pb-0;
+		}
+	}
+}

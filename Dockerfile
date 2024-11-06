@@ -1,4 +1,5 @@
 FROM oven/bun:latest as builder
+
 WORKDIR /app
 
 ARG API_URL

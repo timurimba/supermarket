@@ -1,0 +1,17 @@
+.improve {
+	@apply bg-[#86C342] w-[90px] h-[52px] rounded-md pb-1;
+	box-shadow: inset 0 -5px 0 0 #4e9e1f;
+	span {
+		@apply text-white uppercase font-semibold text-sm;
+	}
+	> div {
+		@apply flex justify-center gap-x-1 items-center;
+		> img {
+			@apply w-7;
+		}
+	}
+
+	&:disabled {
+		@apply cursor-not-allowed scale-100;
+	}
+}

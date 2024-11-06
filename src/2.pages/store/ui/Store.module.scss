@@ -1,0 +1,8 @@
+.store {
+	@apply flex flex-col flex-1;
+	> div {
+		&:last-child {
+			@apply bg-[#57974F] mt-5 rounded-tl-3xl rounded-tr-3xl flex-1 p-5;
+		}
+	}
+}

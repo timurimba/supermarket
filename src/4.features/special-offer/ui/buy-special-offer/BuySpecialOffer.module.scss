@@ -1,0 +1,16 @@
+.buy {
+	@apply bg-[#FFB240]  mx-auto max-w-[132px] w-full h-[56px]  rounded-md;
+	box-shadow: inset 0 -5px 0 0 #c98c31;
+	span {
+		@apply text-white text-lg font-semibold;
+	}
+	> span {
+		@apply uppercase block;
+	}
+	> div {
+		@apply flex -mt-2 items-center justify-center;
+	}
+	&:disabled {
+		@apply cursor-not-allowed scale-100;
+	}
+}

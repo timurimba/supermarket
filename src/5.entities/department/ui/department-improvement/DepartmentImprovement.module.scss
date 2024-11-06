@@ -1,0 +1,17 @@
+.improvement {
+	@apply flex items-center gap-x-1  mt-[14px] bg-white py-4 px-[14px] justify-between rounded-lg;
+	> div {
+		&:first-child {
+			@apply rounded-[4px] flex-shrink-0 w-12 h-12 flex items-center justify-center;
+		}
+		&:first-child + div {
+			@apply text-center;
+			> strong {
+				@apply text-[#1928C1] font-bold;
+			}
+			> p {
+				@apply text-[#5B7CE2] text-xs;
+			}
+		}
+	}
+}

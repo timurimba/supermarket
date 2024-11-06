@@ -1,0 +1,6 @@
+.wrapper {
+	@apply rounded-lg mt-3 cursor-pointer bg-white flex items-center justify-between p-3;
+	> span {
+		@apply text-[#1928C1] font-bold;
+	}
+}

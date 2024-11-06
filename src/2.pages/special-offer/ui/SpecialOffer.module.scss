@@ -1,0 +1,8 @@
+.special {
+	@apply flex flex-col flex-1;
+	> div {
+		&:last-child {
+			@apply bg-[#86A7F5] mt-5 rounded-tl-3xl rounded-tr-3xl flex-1 p-5;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+.settings {
+	@apply flex flex-col flex-1;
+	> div {
+		&:last-child {
+			@apply mt-5 bg-[#20A19D] rounded-tl-3xl rounded-tr-3xl flex-1 p-5 pb-0;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.wrapper {
+	@apply bg-white my-[14px] rounded-lg py-[14px] px-4;
+	> h1 {
+		@apply text-center text-[#1928C1] font-semibold text-lg;
+	}
+	> div {
+		@apply flex justify-between items-center mt-3;
+	}
+}

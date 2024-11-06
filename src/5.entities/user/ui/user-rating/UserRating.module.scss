@@ -1,0 +1,22 @@
+.rating {
+	@apply bg-white mt-[14px] grid grid-cols-3 px-[14px] h-[58px] items-center rounded-lg;
+
+	> strong {
+		@apply text-[#1928C1]  ml-1 font-semibold text-[32px];
+	}
+	> span {
+		@apply text-[#1928C1] text-center  font-bold;
+	}
+	> div {
+		@apply flex items-center justify-end  gap-x-1;
+		> span {
+			@apply text-[#1928C1] font-semibold text-[15px];
+		}
+	}
+	&.me {
+		@apply bg-[#1928C1];
+		span {
+			@apply text-white;
+		}
+	}
+}

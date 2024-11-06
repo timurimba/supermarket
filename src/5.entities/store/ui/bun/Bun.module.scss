@@ -1,0 +1,17 @@
+.bun {
+	@apply py-[14px] h-full flex flex-col  bg-white rounded-xl;
+	> div {
+		@apply flex flex-1 flex-col justify-between;
+		> div {
+			> img {
+				@apply mx-auto w-[70px] h-[76px];
+			}
+			> h3 {
+				@apply leading-[1.2] mt-3 px-1 text-center uppercase text-[#1928C1] text-sm font-semibold;
+			}
+		}
+		> p {
+			@apply justify-center my-3 h-10 bg-[#746ACD] flex items-center gap-x-2 text-white text-[13px] font-semibold text-center;
+		}
+	}
+}
