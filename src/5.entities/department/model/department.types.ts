@@ -15,6 +15,7 @@ export interface IDepartment {
 	current_price: number
 	employees: number
 	processing: number
+	max_employees: number
 }
 
 export interface IDepartmentStats

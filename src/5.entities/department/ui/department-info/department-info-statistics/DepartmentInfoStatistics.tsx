@@ -6,12 +6,13 @@ import processingLogo from '../../../assets/images/processing.svg'
 
 import styles from './DepartmentInfoStatistics.module.scss'
 import { IDepartmentInfoStatisticsProps } from './department-info-statistics.types'
-import { useCustomTranslation } from '@/6.shared'
+import { formatPrice, useCustomTranslation } from '@/6.shared'
 
 const DepartmentInfoStatistics: FC<IDepartmentInfoStatisticsProps> = ({
 	current_price,
 	employees,
-	processing
+	processing,
+	max_employees
 }) => {
 	const {
 		price,
@@ -26,14 +27,16 @@ const DepartmentInfoStatistics: FC<IDepartmentInfoStatisticsProps> = ({
 				<div>
 					<img src={income} alt='' />
 				</div>
-				<span>{current_price}</span>
+				<span>{formatPrice(current_price)}</span>
 			</div>
 			<div>
 				<h5>{employessTranslation}</h5>
 				<div>
 					<img src={employeesLogo} alt='' />
 				</div>
-				<span>{employees}/3</span>
+				<span>
+					{employees}/{max_employees}
+				</span>
 			</div>
 			<div>
 				<h5>{processingTranslation}</h5>

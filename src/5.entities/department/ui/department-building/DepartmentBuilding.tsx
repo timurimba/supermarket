@@ -7,14 +7,19 @@ import fruitsPost from '../../assets/images/fruits-poster.svg'
 import meatPost from '../../assets/images/meat-poster.svg'
 import perfumeryPost from '../../assets/images/perfumery-poster.svg'
 import seafoodPost from '../../assets/images/seafood-poster.svg'
-import { EnumDepartmentName } from '../../model/department.types'
+import {
+	EnumDepartmentName,
+	IDepartmentManagement
+} from '../../model/department.types'
 
 import styles from './DepartmentBuilding.module.scss'
 import { Animated, useCustomTranslation } from '@/6.shared'
 
-const DepartmentBuilding: FC<
-	PropsWithChildren<{ name: EnumDepartmentName }>
-> = ({ name, children }) => {
+const DepartmentBuilding: FC<PropsWithChildren<IDepartmentManagement>> = ({
+	name,
+	info,
+	children
+}) => {
 	const { title } = useCustomTranslation(name)
 	const navigate = useNavigate()
 
@@ -35,12 +40,15 @@ const DepartmentBuilding: FC<
 		}
 	}
 
+	const navigateToDepartment = () => {
+		if (info.exists) {
+			navigate(`/department/${name}`)
+		}
+	}
+
 	return (
 		<Animated>
-			<div
-				onClick={() => navigate(`/department/${name}`)}
-				className={styles.wrapper}
-			>
+			<div onClick={navigateToDepartment} className={styles.wrapper}>
 				<img src={returnImg()} alt='' />
 				<span>{title}</span>
 				{children}

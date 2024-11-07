@@ -8,13 +8,18 @@ export const AnimatedPage = (Page: FC) => {
 				className='flex flex-col flex-1'
 				initial={{ opacity: 0, scale: 0.9, y: 20 }}
 				animate={{ opacity: 1, scale: 1, y: 0 }}
-				exit={{ opacity: 0, scale: 0.9, y: -20, filter: 'blur(8px)' }}
-				transition={{ duration: 0.5 }}
+				exit={{ opacity: 0, scale: 0.9, y: -20 }}
+				transition={{
+					duration: 0.5,
+					ease: 'easeInOut'
+				}}
+				style={{
+					willChange: 'opacity, transform'
+				}}
 			>
 				<Page />
 			</motion.div>
 		)
 	}
-
 	return AnimatedComponent
 }

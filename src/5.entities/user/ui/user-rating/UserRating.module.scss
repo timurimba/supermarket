@@ -13,10 +13,4 @@
 			@apply text-[#1928C1] font-semibold text-[15px];
 		}
 	}
-	&.me {
-		@apply bg-[#1928C1];
-		span {
-			@apply text-white;
-		}
-	}
 }

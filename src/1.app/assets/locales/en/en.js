@@ -61,14 +61,15 @@ const en = {
 		building: {
 			title: 'buildings',
 			description:
-				'Here you can build and expland the supermarket^s departaments and facilities to increase your profit.'
+				"Here you can build and expand the supermarket's departaments and facilities to increase your profit."
 		},
 		stats: {
 			title: 'Stats',
 			description: 'Here yoy can see the overall status of your supermarket',
 			profit: 'Profit',
 			price: 'Price',
-			min: 'per min'
+			min: 'per min',
+			notHave: "You don't have any departments yet"
 		},
 		cashiers: {
 			title: 'Cashiers',
@@ -214,7 +215,7 @@ const en = {
 			level: {
 				title: 'Upgrade department',
 				description: 'Increases profits',
-				action: 'ungrate'
+				action: 'upgrade'
 			},
 			employee: {
 				title: 'Hire employee',

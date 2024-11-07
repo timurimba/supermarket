@@ -1,4 +1,10 @@
-import { expandViewport, init, swipeBehavior } from '@telegram-apps/sdk'
+import {
+	expandViewport,
+	init,
+	initDataUser,
+	restoreInitData,
+	swipeBehavior
+} from '@telegram-apps/sdk'
 import { useAtom } from 'jotai'
 import { type FC, type PropsWithChildren, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -28,6 +34,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
 
 	useEffect(() => {
 		init()
+		restoreInitData()
 		expandViewport()
 		swipeBehavior.mount()
 		swipeBehavior.disableVertical()
@@ -69,17 +76,13 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
 		}
 	}, [isMusicOff])
 
-	// const { user } = useUser()
-
 	useEffect(() => {
 		const languageCodeFromLs = localStorage.getItem('language_code')
 		if (languageCodeFromLs) {
 			i18n.changeLanguage(languageCodeFromLs)
 		} else {
-			const languageCode = 'ru'
-			// const languageCode = user?.language_code
-
-			if (languageCode === 'ru') i18n.changeLanguage(languageCode)
+			const languageCode = initDataUser()?.languageCode
+			if (languageCode === 'ru') i18n.changeLanguage('ru')
 		}
 	}, [])
 

@@ -18,6 +18,7 @@ const DepartmentInfo: FC<{ department: IDepartment; name: string }> = ({
 				current_level_name={department.current_level_name}
 			/>
 			<DepartmentInfoStatistics
+				max_employees={department.max_employees}
 				employees={department.employees}
 				current_price={department.current_price}
 				processing={department.processing}

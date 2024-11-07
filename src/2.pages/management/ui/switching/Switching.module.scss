@@ -3,7 +3,8 @@
 	> div {
 		@apply w-1/2;
 		> button {
-			@apply w-12 overflow-hidden px-[10px] py-2 h-10 rounded-md flex items-center gap-x-4  bg-white transition-all duration-300;
+			@apply w-12 overflow-hidden px-[10px] py-2 h-10 rounded-md flex items-center gap-x-4  bg-white;
+			transition: width 0.3s linear;
 			box-shadow: inset 0 -3px 0 0 #b5b5b5;
 			> span {
 				@apply uppercase text-[#1928C1] font-semibold;

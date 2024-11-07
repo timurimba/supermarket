@@ -10,6 +10,7 @@ import char from '@/6.shared/assets/images/char.svg'
 const Switching: FC<ISwitchingProps> = ({ setType, type }) => {
 	const { title: titleBuilding } = useCustomTranslation('building')
 	const { title: titleStats } = useCustomTranslation('stats')
+
 	return (
 		<div className={styles.switching}>
 			<div>

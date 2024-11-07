@@ -12,15 +12,20 @@ import {
 	audioSoundAtom,
 	isSoundOffAtom
 } from '@/5.entities'
-import { Loader, dollar, formatPrice } from '@/6.shared'
+import { Loader, dollar, formatPrice, queryClient } from '@/6.shared'
 
 const DepartmentBuy: FC<IDepartmentBuyProps> = ({ price, exists, name }) => {
 	const [isSoundOff] = useAtom(isSoundOffAtom)
 	const [audioSound] = useAtom(audioSoundAtom)
-	const { data: user } = useQuery({
-		queryKey: ['user'],
-		queryFn: () => UserService.getInfo()
+
+	const { data: profit } = useQuery({
+		queryKey: ['user-profit'],
+		queryFn: () => UserService.getInfo(),
+		select: data => {
+			return data.profit
+		}
 	})
+
 	const { isPending, mutate: buy } = useMutation({
 		mutationKey: ['buy', name],
 		mutationFn: () => DepartmentService.buy(name),
@@ -28,6 +33,12 @@ const DepartmentBuy: FC<IDepartmentBuyProps> = ({ price, exists, name }) => {
 			if (!isSoundOff) {
 				audioSound.play()
 			}
+			queryClient.invalidateQueries({
+				queryKey: ['user']
+			})
+			queryClient.invalidateQueries({
+				queryKey: ['departments']
+			})
 		}
 	})
 
@@ -38,10 +49,10 @@ const DepartmentBuy: FC<IDepartmentBuyProps> = ({ price, exists, name }) => {
 
 	return (
 		<button
-			disabled={exists || isPending}
+			disabled={exists || isPending || profit! < price}
 			onClick={handlerBuy}
 			className={cn(styles.buy, {
-				[styles['not-money']]: user && user.profit < price
+				[styles['not-money']]: profit! < price && !exists
 			})}
 		>
 			{!isPending ? (

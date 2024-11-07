@@ -1,4 +1,3 @@
-import { initDataUser } from '@telegram-apps/sdk'
 import cn from 'clsx'
 import { forwardRef } from 'react'
 
@@ -25,12 +24,7 @@ const UserRating = forwardRef<HTMLDivElement, IUserRatingProps>(
 		}
 
 		return (
-			<div
-				ref={ref}
-				className={cn(styles.rating, {
-					[styles.me]: tg_login === initDataUser.name
-				})}
-			>
+			<div ref={ref} className={styles.rating}>
 				{getRank()}
 				<span
 					className={cn({

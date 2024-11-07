@@ -1,10 +1,12 @@
 .buy {
-	@apply text-center rounded-lg w-[55px] h-[50px] px-[14px] py-[10px] bg-[#86C342];
-	> div {
-		> span {
-			@apply block text-white font-bold;
-		}
+	@apply flex flex-col items-center justify-center rounded-lg w-[55px] h-[50px]  bg-[#86C342];
+	> img {
+		@apply w-[26px];
 	}
+	> span {
+		@apply block text-white font-bold;
+	}
+
 	box-shadow: inset 0 -5px 0 0 #4e9e1f;
 
 	&:disabled {

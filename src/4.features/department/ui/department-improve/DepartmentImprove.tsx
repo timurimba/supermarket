@@ -10,8 +10,7 @@ const DepartmentImprove: FC<TypeDepartmentImproveProps> = ({
 	improvement,
 	name,
 	price,
-	isCompleted,
-	disabled
+	isCompleted
 }) => {
 	const { action } = useCustomTranslation(`improvement.${improvement}`)
 	const { hire, upgrade, isPending } = useDepartmentImprove(name!)

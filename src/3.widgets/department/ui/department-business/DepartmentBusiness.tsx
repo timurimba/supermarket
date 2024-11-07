@@ -41,7 +41,9 @@ const DepartmentBusiness: FC = () => {
 	return (
 		<div>
 			{department && !isLoading ? (
-				<DepartmentInfo name={departmentName} department={department} />
+				<Animated>
+					<DepartmentInfo name={departmentName} department={department} />
+				</Animated>
 			) : (
 				<Skeleton className='max-w-full w-full' height={297} />
 			)}
@@ -67,7 +69,7 @@ const DepartmentBusiness: FC = () => {
 			</DepartmentImprovement>
 			<DepartmentImprovement improvement='employee'>
 				<Animated>
-					{department && department.employees === 3 ? (
+					{department && department.employees === department.max_employees ? (
 						<DepartmentImprove isCompleted />
 					) : employeePrice && !isLoadingEmployee ? (
 						<DepartmentImprove

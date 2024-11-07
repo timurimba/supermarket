@@ -7,7 +7,6 @@ interface BaseDepartmentImproveProps
 	improvement: 'level' | 'employee'
 }
 
-// Перегружаем тип с учетом значения `isCompleted`
 export type TypeDepartmentImproveProps =
 	| (BaseDepartmentImproveProps & { isCompleted?: false })
 	| (Partial<BaseDepartmentImproveProps> & { isCompleted: true })

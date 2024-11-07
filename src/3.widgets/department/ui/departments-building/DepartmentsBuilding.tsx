@@ -21,7 +21,7 @@ const DepartmentsBuilding: FC = () => {
 			</Animated>
 			{!isLoading && departments?.length ? (
 				departments.map(d => (
-					<DepartmentBuilding key={d.name} name={d.name}>
+					<DepartmentBuilding key={d.name} name={d.name} info={d.info}>
 						<DepartmentBuy
 							name={d.name}
 							price={d.info.price}
