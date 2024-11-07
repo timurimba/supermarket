@@ -62,7 +62,7 @@ const DepartmentBusiness: FC = () => {
 							baseColor='#B8D1A8'
 							width={90}
 							height={52}
-							className='rounded-md'
+							className='!rounded-md'
 						/>
 					</Animated>
 				)}
@@ -82,7 +82,7 @@ const DepartmentBusiness: FC = () => {
 							baseColor='#B8D1A8'
 							width={90}
 							height={52}
-							className='rounded-md'
+							className='!rounded-md'
 						/>
 					)}
 				</Animated>
