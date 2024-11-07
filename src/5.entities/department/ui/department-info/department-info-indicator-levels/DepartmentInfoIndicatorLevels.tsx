@@ -8,7 +8,6 @@ import { IDepartmentInfoIndicatorLevelsProps } from './department-info-indicator
 const DepartmentInfoIndicatorLevels: FC<
 	IDepartmentInfoIndicatorLevelsProps
 > = ({ current_level, current_max_level, current_min_level }) => {
-	console.log(current_level)
 	return (
 		<div className={styles.wrapper}>
 			<div className='absolute w-[90%]  top-0 left-1/2 -translate-x-1/2'>

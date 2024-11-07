@@ -12,7 +12,6 @@ const BASE = '/management/department'
 export const DepartmentService = {
 	get: async (name: string) => {
 		const { data } = await instance.get<IDepartment>(`${BASE}/${name}`)
-
 		return data
 	},
 	getAll: async () => {

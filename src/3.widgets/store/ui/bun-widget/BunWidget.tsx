@@ -17,8 +17,8 @@ const BunWidget: FC = () => {
 		<div className={styles.wrapper}>
 			{buns && !isLoading ? (
 				buns.map(bun => (
-					<Animated>
-						<Bun key={bun.name} bunName={bun.name}>
+					<Animated key={bun.name}>
+						<Bun bunName={bun.name}>
 							<BunBuy bunName={bun.name} info={bun.info} />
 						</Bun>
 					</Animated>

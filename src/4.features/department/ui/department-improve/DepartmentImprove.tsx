@@ -1,9 +1,12 @@
+import { useQuery } from '@tanstack/react-query'
+import cn from 'clsx'
 import { Check } from 'lucide-react'
 import type { FC } from 'react'
 
 import styles from './DepartmentImprove.module.scss'
 import { TypeDepartmentImproveProps } from './DepartmentImprove.types'
 import { useDepartmentImprove } from './useDepartmentImprove'
+import { UserService } from '@/5.entities'
 import { Loader, dollar, formatPrice, useCustomTranslation } from '@/6.shared'
 
 const DepartmentImprove: FC<TypeDepartmentImproveProps> = ({
@@ -12,6 +15,11 @@ const DepartmentImprove: FC<TypeDepartmentImproveProps> = ({
 	price,
 	isCompleted
 }) => {
+	const { data: user } = useQuery({
+		queryKey: ['user'],
+		queryFn: () => UserService.getInfo()
+	})
+
 	const { action } = useCustomTranslation(`improvement.${improvement}`)
 	const { hire, upgrade, isPending } = useDepartmentImprove(name!)
 
@@ -26,8 +34,10 @@ const DepartmentImprove: FC<TypeDepartmentImproveProps> = ({
 	return (
 		<button
 			onClick={handlerImprove}
-			disabled={isPending || isCompleted}
-			className={styles.improve}
+			disabled={isPending || isCompleted || user!.profit < price}
+			className={cn(styles.improve, {
+				[styles['not-money']]: user!.profit < price!
+			})}
 		>
 			{isCompleted ? (
 				<div className='flex items-center'>

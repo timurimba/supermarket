@@ -28,7 +28,7 @@ const DepartmentBusiness: FC = () => {
 	})
 
 	useEffect(() => {
-		if (department && department.employees < 3) {
+		if (department && department.employees < department.max_employees) {
 			refetch()
 		}
 	}, [department])

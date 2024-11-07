@@ -18,12 +18,9 @@ const DepartmentBuy: FC<IDepartmentBuyProps> = ({ price, exists, name }) => {
 	const [isSoundOff] = useAtom(isSoundOffAtom)
 	const [audioSound] = useAtom(audioSoundAtom)
 
-	const { data: profit } = useQuery({
-		queryKey: ['user-profit'],
-		queryFn: () => UserService.getInfo(),
-		select: data => {
-			return data.profit
-		}
+	const { data: user } = useQuery({
+		queryKey: ['user'],
+		queryFn: () => UserService.getInfo()
 	})
 
 	const { isPending, mutate: buy } = useMutation({
@@ -49,10 +46,10 @@ const DepartmentBuy: FC<IDepartmentBuyProps> = ({ price, exists, name }) => {
 
 	return (
 		<button
-			disabled={exists || isPending || profit! < price}
+			disabled={exists || isPending || user!.profit < price}
 			onClick={handlerBuy}
 			className={cn(styles.buy, {
-				[styles['not-money']]: profit! < price && !exists
+				[styles['not-money']]: user!.profit < price && !exists
 			})}
 		>
 			{!isPending ? (
