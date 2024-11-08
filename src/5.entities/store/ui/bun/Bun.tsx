@@ -22,7 +22,11 @@ const Bun: FC<PropsWithChildren<IBunProps>> = ({ bunName, children }) => {
 					{bunName === EnumNameStoreItem.QUALITY && (
 						<img className='w-8' src={dollar} alt='' />
 					)}
-					{description}
+					<span
+						dangerouslySetInnerHTML={{
+							__html: description.replace(/, /g, ',<br />')
+						}}
+					/>
 				</p>
 			</div>
 			{children}

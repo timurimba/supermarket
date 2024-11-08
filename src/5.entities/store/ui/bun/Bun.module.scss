@@ -11,7 +11,13 @@
 			}
 		}
 		> p {
-			@apply justify-center my-3 h-10 bg-[#746ACD] flex items-center gap-x-2 text-white text-[13px] font-semibold text-center;
+			@apply my-3 px-[2px] h-10 bg-[#746ACD] flex justify-center items-center  gap-x-2 text-white text-[12px] font-semibold text-center;
+			> img {
+				@apply m-0;
+			}
+			@media (width <= 420px) {
+				@apply text-[10px];
+			}
 		}
 	}
 }

@@ -34,7 +34,7 @@ const en = {
 			hire: 'Hire'
 		},
 		perfumery: {
-			title: 'Perfume Department',
+			title: 'Perfume Section',
 			eau_de_toilet: {
 				title: 'Eau de toilet',
 				description: 'This perfume is formulated with toilet water.'
@@ -88,11 +88,11 @@ const en = {
 			upgrades: 'UPGRADES',
 			manager: {
 				title: 'GENERAL MANAGER',
-				description: '10h offline earning'
+				description: '10h offline earning, forever'
 			},
 			quality: {
 				title: 'QUALITY SEAL',
-				description: 'х2 profits'
+				description: 'х2 profits, 1 day'
 			},
 			security: {
 				title: 'Security Guard',
@@ -105,7 +105,7 @@ const en = {
 			wrong: 'Something went wrong. Please try again later!'
 		},
 		fruits: {
-			title: 'Fruits section',
+			title: 'Fruits Section',
 			not_fresh_fruits: {
 				title: 'Overripe fruit',
 				description:
@@ -148,7 +148,7 @@ const en = {
 			improve_title: 'UPGRADE BAKERY'
 		},
 		seafood: {
-			title: 'Seafood Department',
+			title: 'Seafood Section',
 			something: {
 				title: "What's that?",
 				description:
@@ -169,7 +169,7 @@ const en = {
 			improve_title: 'UPGRADE SEAFOOD DEPARTMENT'
 		},
 		clothing: {
-			title: 'Clothing Department',
+			title: 'Clothing Section',
 			short_socks: {
 				title: 'Short socks',
 				description: "So short that they'll only cover toes."

@@ -1,6 +1,10 @@
 .dollar {
 	@apply absolute top-[48%] left-[43%] w-[15px] h-[15px] text-shadow;
 	animation: fadeInScale 0.5s ease-in-out;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	will-change: transform;
+	filter: blur(0);
 }
 
 @keyframes fadeInScale {

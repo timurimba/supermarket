@@ -5,6 +5,7 @@ import { IDepartmentStats } from '@/5.entities'
 import {
 	Animated,
 	dollar,
+	formatPrice,
 	getImgDepartment,
 	useCustomTranslation
 } from '@/6.shared'
@@ -39,10 +40,11 @@ const DepartmentStats: FC<IDepartmentStats> = ({
 				</div>
 				<div>
 					<div>
-						{price}: <span>{current_price}</span> <img src={dollar} alt='' />
+						{price}: <span>{formatPrice(current_price)}</span>{' '}
+						<img src={dollar} alt='' />
 					</div>
 					<div>
-						{profitTranslation}: <span>{profit}</span>{' '}
+						{profitTranslation}: <span>{formatPrice(profit)}</span>{' '}
 						<img src={dollar} alt='' /> {min}
 					</div>
 				</div>

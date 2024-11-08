@@ -3,6 +3,14 @@
 	> div {
 		&:last-child {
 			@apply bg-[#86A7F5] mt-5 rounded-tl-3xl rounded-tr-3xl flex-1 p-5;
+			> div {
+				&:first-child {
+					@apply relative;
+					> span {
+						@apply text-white uppercase left-1/2 -translate-x-1/2 bottom-11 absolute font-semibold text-sm;
+					}
+				}
+			}
 		}
 	}
 }

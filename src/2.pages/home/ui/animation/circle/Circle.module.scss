@@ -1,7 +1,11 @@
 .circle {
 	@apply rounded-full flex items-center justify-center  transition-all absolute top-[48%] left-[43%] w-[15px] h-[15px];
-
 	transform: rotateX(45deg);
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	will-change: backroundImage;
+	filter: blur(0);
+
 	&::before {
 		@apply content-[''] absolute w-[10px] h-[10px] rounded-full bg-[#919eb8];
 	}

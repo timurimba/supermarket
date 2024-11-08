@@ -5,6 +5,7 @@ import Dollar from './dollar/Dollar'
 
 const Animation: FC = () => {
 	const [isAnimateDollar, setIsAnimateDollar] = useState(false)
+
 	return isAnimateDollar ? (
 		<Dollar setIsAnimateDollar={setIsAnimateDollar} />
 	) : (

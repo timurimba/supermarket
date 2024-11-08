@@ -12,7 +12,6 @@ import tasks from '../assets/images/tasks.svg'
 import x from '../assets/images/x.svg'
 
 import styles from './Home.module.scss'
-import Animation from './animation/Animation'
 import { AnimatedPage } from '@/6.shared'
 import char from '@/6.shared/assets/images/char.svg'
 import cup from '@/6.shared/assets/images/cup-1.svg'
@@ -95,7 +94,7 @@ const Home: FC = () => {
 				className='absolute top-[93px] left-[56px] w-full scale-[3]'
 			>
 				<img src={bg} />
-				<Animation />
+				{/* <Animation /> */}
 			</div>
 			<div>
 				<div>

@@ -8,12 +8,15 @@ import { BuySpecialOffer } from '@/4.features'
 import { AnimatedPage, Title, useCustomTranslation } from '@/6.shared'
 
 const SpecialOffer: FC = () => {
-	const { title } = useCustomTranslation('special_offer')
+	const { title, who } = useCustomTranslation('special_offer')
 	return (
 		<div className={styles.special}>
 			<Title>{title}</Title>
 			<div>
-				<img className='mx-auto mb-5' src={specialOffer} alt='' />
+				<div>
+					<img className='mx-auto mb-5' src={specialOffer} alt='' />
+					<span>{who}</span>
+				</div>
 				<SpecialOfferWidget>
 					<BuySpecialOffer />
 				</SpecialOfferWidget>

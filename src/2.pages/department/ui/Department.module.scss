@@ -4,5 +4,13 @@
 		&:last-child {
 			@apply mt-5 rounded-tl-3xl rounded-tr-3xl flex-1 p-5 pb-3;
 		}
+		&:first-child {
+			> h1 {
+				@apply text-[28px];
+				@media (width <= 410px) {
+					@apply text-2xl;
+				}
+			}
+		}
 	}
 }
