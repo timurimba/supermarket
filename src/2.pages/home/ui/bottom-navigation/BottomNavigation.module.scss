@@ -1,0 +1,14 @@
+.wrapper {
+	> div {
+		&:first-child {
+			@apply ml-auto mb-4  bg-[#FFFFFF] bg-opacity-[.87] shadow-base w-[55px] h-[55px] flex justify-center items-center rounded-[15px] relative z-50;
+		}
+		&:last-child {
+			@apply flex bg-white bg-opacity-70 items-center justify-between px-5 py-4 gap-x-2 rounded-xl relative z-50 mb-5;
+			> a {
+				@apply shadow-base bg-white p-2 rounded-lg w-[54px] h-[54px] flex items-center justify-center;
+				box-shadow: inset 0 -3px 0 0 #b5b5b5;
+			}
+		}
+	}
+}
