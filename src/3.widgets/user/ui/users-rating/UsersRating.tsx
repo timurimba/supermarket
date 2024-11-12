@@ -5,7 +5,7 @@ import Skeleton from 'react-loading-skeleton'
 
 import styles from './UsersRating.module.scss'
 import { UserRating, UserService } from '@/5.entities'
-import { Animated, coin, useCustomTranslation } from '@/6.shared'
+import { Animated, coin, useCustomTranslation, formatPrice } from '@/6.shared'
 
 const UsersRating: FC = () => {
 	const { place, nickname, token } = useCustomTranslation('rating')
@@ -49,7 +49,7 @@ const UsersRating: FC = () => {
 									index={index + 1}
 									ref={isLastItem ? ref : null}
 									tg_login={r.tg_login}
-									coin={r.coin}
+									coin={formatPrice(r.coin)}
 								/>
 							</Animated>
 						)
@@ -71,7 +71,7 @@ const UsersRating: FC = () => {
 						<span>{myRating.tg_login}</span>
 						<div>
 							<img src={coin} alt='' />
-							<span>{myRating.coin}</span>
+							<span>{formatPrice(myRating.coin)}</span>
 						</div>
 					</div>
 				</Animated>
