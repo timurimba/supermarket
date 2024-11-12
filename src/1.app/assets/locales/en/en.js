@@ -88,7 +88,7 @@ const en = {
 			upgrades: 'UPGRADES',
 			manager: {
 				title: 'GENERAL MANAGER',
-				description: '10h offline earning, forever'
+				description: '10h offline earning'
 			},
 			quality: {
 				title: 'QUALITY SEAL',

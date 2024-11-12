@@ -6,7 +6,7 @@ import cup3 from '../../assets/images/cup-3.svg'
 
 import styles from './UserRating.module.scss'
 import { IUserRatingProps } from './user-rating.types'
-import { coin as coinLogo, cup1 } from '@/6.shared'
+import { coin as coinLogo, cup1, formatPrice } from '@/6.shared'
 
 const UserRating = forwardRef<HTMLDivElement, IUserRatingProps>(
 	({ index, coin, tg_login }, ref) => {
@@ -35,7 +35,7 @@ const UserRating = forwardRef<HTMLDivElement, IUserRatingProps>(
 				</span>
 				<div>
 					<img src={coinLogo} alt='' />
-					<span>{coin}</span>
+					<span>{formatPrice(coin)}</span>
 				</div>
 			</div>
 		)
