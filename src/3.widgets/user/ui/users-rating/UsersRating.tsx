@@ -49,7 +49,7 @@ const UsersRating: FC = () => {
 									index={index + 1}
 									ref={isLastItem ? ref : null}
 									tg_login={r.tg_login}
-									coin={formatPrice(r.coin)}
+									coin={r.coin}
 								/>
 							</Animated>
 						)
