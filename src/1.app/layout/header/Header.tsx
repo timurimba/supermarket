@@ -1,41 +1,44 @@
 import { useQuery } from '@tanstack/react-query'
-import cn from 'clsx'
-import { useAtom } from 'jotai'
+import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import Skeleton from 'react-loading-skeleton'
 
 import info from '../assets/images/info.svg'
 
 import styles from './Header.module.scss'
-import { UserService, stepTutorialAtom } from '@/5.entities'
-import { coin, formatPrice } from '@/6.shared'
+import { UserService } from '@/5.entities'
+import { TokenInfo, coin, formatPrice } from '@/6.shared'
 import dollar from '@/6.shared/assets/images/dollar.svg'
 import Animated from '@/6.shared/ui/animated/Animated'
 
 const Header = () => {
-	const [stepTutorial] = useAtom(stepTutorialAtom)
+	const [isOpenInfoToken, setIsOpenInfoToken] = useState(false)
 
 	const { data, isLoading } = useQuery({
 		queryKey: ['user'],
 		queryFn: () => UserService.getInfo()
 	})
 
+	if (isOpenInfoToken) {
+		return createPortal(
+			<TokenInfo setIsOpenTokenInfo={setIsOpenInfoToken} />,
+			document.body
+		)
+	}
+
 	return (
 		<header className={styles.header}>
 			<div>
 				{data && !isLoading ? (
 					<>
-						<Animated
-							className={cn({
-								'!z-[100]': stepTutorial === 2
-							})}
-						>
+						<Animated>
 							<img src={dollar} alt='' />
 							<span>{formatPrice(data ? data.profit : 0)}</span>
 						</Animated>
 						<Animated>
 							<img src={coin} alt='' />
 							<span>{formatPrice(data ? data.coin : 0)}</span>
-							<img src={info} alt='' />
+							<img onClick={() => setIsOpenInfoToken(true)} src={info} alt='' />
 						</Animated>
 					</>
 				) : (

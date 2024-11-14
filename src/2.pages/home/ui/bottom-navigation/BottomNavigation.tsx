@@ -1,5 +1,3 @@
-import cn from 'clsx'
-import { useAtom } from 'jotai'
 import type { FC } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -10,11 +8,8 @@ import shop from '../../assets/images/store-home.svg'
 import tasks from '../../assets/images/tasks.svg'
 
 import styles from './BottomNavigation.module.scss'
-import { stepTutorialAtom } from '@/5.entities'
 
 const BottomNavigation: FC = () => {
-	const [stepTutorial] = useAtom(stepTutorialAtom)
-
 	return (
 		<div className={styles.wrapper}>
 			<div>
@@ -23,12 +18,7 @@ const BottomNavigation: FC = () => {
 				</Link>
 			</div>
 			<div>
-				<Link
-					className={cn({
-						'!z-[100] relative': stepTutorial === 6
-					})}
-					to='/management'
-				>
+				<Link to='/management'>
 					<img src={management} alt='' />
 				</Link>
 				<Link to='/cashiers'>

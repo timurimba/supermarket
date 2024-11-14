@@ -1,5 +1,5 @@
-.reminder {
-	@apply absolute h-screen w-full  bg-no-repeat bg-center bg-cover  top-0 left-0  bg-black px-5 pt-16 flex flex-col justify-between;
+.info {
+	@apply absolute h-screen w-full  bg-no-repeat bg-center bg-cover  top-0 left-0  bg-black px-5 pt-16 z-[100] flex flex-col justify-between;
 	background-image: url('../../assets/images/reminder-bg.jpg');
 	&::before {
 		@apply content-[''] block absolute top-0 left-0 w-full h-full;

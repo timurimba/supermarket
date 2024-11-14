@@ -10,6 +10,7 @@ import { useCustomTranslation } from './lib/hooks/useCustomTranslation'
 import Animated from './ui/animated/Animated'
 import Loader from './ui/loader/Loader'
 import Title from './ui/title/Title'
+import TokenInfo from './ui/token-info/TokenInfo'
 
 export * from './config'
 export {
@@ -24,5 +25,6 @@ export {
 	Loader,
 	star,
 	Title,
+	TokenInfo,
 	useCustomTranslation
 }

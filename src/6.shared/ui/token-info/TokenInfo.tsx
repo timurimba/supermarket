@@ -4,17 +4,17 @@ import type { Dispatch, FC } from 'react'
 import treasure from '../../assets/images/treasure.svg'
 import x from '../../assets/images/x-reminder.svg'
 
-import styles from './Reminder.module.scss'
+import styles from './TokenInfo.module.scss'
 import { Animated, useCustomTranslation } from '@/6.shared'
 
-const Reminder: FC<{
-	setIsCloseReminder: Dispatch<SetStateAction<boolean>>
-}> = ({ setIsCloseReminder }) => {
+const TokenInfo: FC<{
+	setIsOpenTokenInfo: Dispatch<SetStateAction<boolean>>
+}> = ({ setIsOpenTokenInfo }) => {
 	const { info, achievements } = useCustomTranslation('about')
 
 	return (
-		<div className={styles.reminder}>
-			<button onClick={() => setIsCloseReminder(true)}>
+		<div className={styles.info}>
+			<button onClick={() => setIsOpenTokenInfo(false)}>
 				<img src={x} alt='' />
 			</button>
 			<Animated>
@@ -26,4 +26,4 @@ const Reminder: FC<{
 	)
 }
 
-export default Reminder
+export default TokenInfo
