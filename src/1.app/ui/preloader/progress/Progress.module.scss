@@ -1,0 +1,30 @@
+.progress {
+	@apply bg-white mb-5  rounded-lg p-[3px] w-full h-7;
+
+	> div {
+		@apply bg-[#F9A324] relative overflow-visible rounded-md w-16 h-full;
+		will-change: 'width';
+		transition: width 0.2s linear;
+		animation: animate 5s linear forwards;
+		> img {
+			@apply absolute -top-[60%] -right-2;
+		}
+	}
+}
+
+@keyframes animate {
+	0% {
+		@apply w-16;
+	}
+	50% {
+		@apply w-1/2;
+	}
+
+	80% {
+		@apply w-1/2;
+	}
+
+	100% {
+		@apply w-full;
+	}
+}

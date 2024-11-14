@@ -9,8 +9,7 @@ export default {
 				base: '0 4px 4px rgba(0, 0, 0, 0.25)'
 			},
 			fontFamily: {
-				'rubik-one': [],
-				'rubik-mono': []
+				offside: ['Offside', 'sans-serif']
 			}
 		}
 	},

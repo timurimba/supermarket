@@ -1,9 +1,10 @@
-import type { FC } from 'react'
+import { type FC } from 'react'
 
 import bg from '../assets/images/bg-tycon.jpg'
 import { useHome } from '../lib/hooks/useHome'
 
 import styles from './Home.module.scss'
+import Animation from './animation/Animation'
 import BottomNavigation from './bottom-navigation/BottomNavigation'
 import TopNavigation from './top-navigation/TopNavigation'
 import { AnimatedPage } from '@/6.shared'
@@ -19,6 +20,7 @@ const Home: FC = () => {
 				onTouchMove={handleTouchMove}
 				className='absolute top-[93px] left-[56px] w-full scale-[3]'
 			>
+				<Animation />
 				<img src={bg} />
 			</div>
 			<TopNavigation />

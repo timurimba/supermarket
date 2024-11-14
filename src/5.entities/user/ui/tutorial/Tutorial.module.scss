@@ -1,0 +1,17 @@
+.tutorial {
+	@apply bg-white  flex justify-between gap-x-3 rounded-lg p-5 absolute w-[96%] bottom-[18%] left-1/2 -translate-x-1/2   min-h-[174px] z-50;
+	> img {
+		@apply absolute -bottom-[5.5%] right-0;
+	}
+	> div {
+		@apply flex flex-col justify-between;
+		> p {
+			@apply font-offside text-base tracking-wider text-[#0B0B0B];
+			filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25));
+		}
+		> span {
+			@apply text-sm font-offside tracking-wider text-[#0B0B0B];
+			filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25));
+		}
+	}
+}

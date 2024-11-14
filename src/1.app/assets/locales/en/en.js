@@ -1,5 +1,9 @@
 const en = {
 	translation: {
+		about: {
+			achievements: 'All your achievements will be converted into tokens',
+			info: 'The listing is scheduled for the third quarter of 2025'
+		},
 		rating: {
 			title: 'Rating',
 			place: 'Place',

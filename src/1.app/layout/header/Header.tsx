@@ -1,15 +1,19 @@
 import { useQuery } from '@tanstack/react-query'
+import cn from 'clsx'
+import { useAtom } from 'jotai'
 import Skeleton from 'react-loading-skeleton'
 
 import info from '../assets/images/info.svg'
 
 import styles from './Header.module.scss'
-import { UserService } from '@/5.entities'
+import { UserService, stepTutorialAtom } from '@/5.entities'
 import { coin, formatPrice } from '@/6.shared'
 import dollar from '@/6.shared/assets/images/dollar.svg'
 import Animated from '@/6.shared/ui/animated/Animated'
 
 const Header = () => {
+	const [stepTutorial] = useAtom(stepTutorialAtom)
+
 	const { data, isLoading } = useQuery({
 		queryKey: ['user'],
 		queryFn: () => UserService.getInfo()
@@ -20,7 +24,11 @@ const Header = () => {
 			<div>
 				{data && !isLoading ? (
 					<>
-						<Animated>
+						<Animated
+							className={cn({
+								'!z-[100]': stepTutorial === 2
+							})}
+						>
 							<img src={dollar} alt='' />
 							<span>{formatPrice(data ? data.profit : 0)}</span>
 						</Animated>

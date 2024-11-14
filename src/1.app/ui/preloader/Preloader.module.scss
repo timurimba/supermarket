@@ -1,0 +1,10 @@
+.preloader {
+	@apply bg-no-repeat bg-center bg-cover h-screen flex flex-col pb-12 px-5 justify-end;
+	background-image: url('../../assets/images/preloader-bg.jpg');
+	> p {
+		@apply text-white text-center leading-4 max-w-[244px] mx-auto text-sm;
+		&:last-child {
+			@apply mt-2;
+		}
+	}
+}

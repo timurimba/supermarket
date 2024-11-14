@@ -1,13 +1,5 @@
-import {
-	expandViewport,
-	init,
-	initDataUser,
-	restoreInitData,
-	swipeBehavior
-} from '@telegram-apps/sdk'
 import { useAtom } from 'jotai'
 import { type FC, type PropsWithChildren, useEffect, useRef } from 'react'
-import { useTranslation } from 'react-i18next'
 import { useLocation } from 'react-router-dom'
 
 import { bgRoutes } from '../providers/router/router.data'
@@ -20,7 +12,6 @@ import { audioSoundAtom, isMusicOffAtom, isSoundOffAtom } from '@/5.entities'
 import { queryClient } from '@/6.shared'
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
-	const { i18n } = useTranslation()
 	const { pathname } = useLocation()
 	const [isMusicOff, setIsMusicOff] = useAtom(isMusicOffAtom)
 	const [isSoundOff, setIsSoundOff] = useAtom(isSoundOffAtom)
@@ -31,15 +22,6 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
 	const routeSplit = pathname.split('/')
 
 	const route = `/${routeSplit[routeSplit.length - 1]}`
-
-	useEffect(() => {
-		init()
-		restoreInitData()
-		expandViewport()
-		swipeBehavior.mount()
-		swipeBehavior.disableVertical()
-		document.body.style.height = `${window.innerHeight * 1.5}px`
-	}, [])
 
 	useEffect(() => {
 		const isMusicOffLs = localStorage.getItem('isMusicOff')
@@ -75,16 +57,6 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
 			localStorage.removeItem('isMusicOff')
 		}
 	}, [isMusicOff])
-
-	useEffect(() => {
-		const languageCodeFromLs = localStorage.getItem('language_code')
-		if (languageCodeFromLs) {
-			i18n.changeLanguage(languageCodeFromLs)
-		} else {
-			const languageCode = initDataUser()?.languageCode
-			if (languageCode === 'ru') i18n.changeLanguage('ru')
-		}
-	}, [])
 
 	useEffect(() => {
 		setInterval(() => {

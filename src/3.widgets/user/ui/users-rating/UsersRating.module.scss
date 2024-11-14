@@ -12,6 +12,9 @@
 					@apply text-end;
 				}
 			}
+			& + div {
+				@apply max-h-[440px] overflow-y-scroll;
+			}
 		}
 	}
 }
